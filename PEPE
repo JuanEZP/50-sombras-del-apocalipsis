@@ -1,0 +1,3270 @@
+<!DOCTYPE html>
+<html class="no-touch" lang="es"
+      dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e166f1a66f","applicationID":"57841919","transactionName":"egxYEkVcCAhSR0ldEVwOaRBSQRcNWFsVGxZRDEE=","queueTime":1,"applicationTime":700,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"e166f1a66f",applicationID:"57841919"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="theme-color" content="#c52626">
+
+    <link rel="preconnect" href="https://img-hws.y8.com">
+    <link rel="preconnect" href="https://img-cf.y8.com">
+    <link rel="preconnect" href="https://cdn.y8.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://account.y8.com">
+
+    <link rel="manifest" href="/manifest_files/y8.json">
+
+    <meta name="X-Current-Skin-Name" content="y8.com" />
+<meta name="X-Current-Skin-Shortname" content="y8" />
+<meta name="X-Current-Skin-Domain" content="y8.com" />
+<meta name="X-Current-Kind-Name" content="game" />
+
+
+    <title>Juega Death Squad: The Last Mission en línea en Y8.com</title>
+    <meta name="description" content="¡Juega gratis a Death Squad: The Last Mission, el juego online gratis en Y8.com! Haz clic ahora para jugar a Death Squad: The Last Mission. Disfruta de los mejores juegos relacionados con Death Squad: The Last Mission." />
+    <meta name="keywords" content="Army, 1 player, Shooting, War, Street, Killing, Series, First Person Shooter, 3D, Gun, Free, Unity, Y8 Account, WebGL, Y8 Highscore, Y8 Save, Y8 Achievements" />
+    
+  
+  
+  
+  <meta property="og:title" content="Juega Death Squad: The Last Mission en línea en Y8.com">
+<meta property="og:type" content="website" >
+<meta property="og:url" content="https://es.y8.com/games/death_squad_the_last_mission">
+<meta property="og:image" content="https://img-hws.y8.com/cloud/v2-y8-thumbs-thumbnail464x348s-001/5731/thumbnail464x348.gif">
+<meta property="og:image:width" content="464">
+<meta property="og:image:height" content="348">
+<meta property="og:site_name" content="Y8.Com">
+<meta property="og:description" content="¡Juega gratis a Death Squad: The Last Mission, el juego online gratis en Y8.com! Haz clic ahora para jugar a Death Squad: The Last Mission. Disfruta de los mejores juegos relacionados con Death Squad: The Last Mission.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@y8_com">
+<meta name="twitter:url" content="https://es.y8.com/games/death_squad_the_last_mission">
+<meta name="twitter:title" content="Juega Death Squad: The Last Mission en línea en Y8.com">
+<meta name="twitter:description" content="¡Juega gratis a Death Squad: The Last Mission, el juego online gratis en Y8.com! Haz clic ahora para jugar a Death Squad: The Last Mission. Disfruta de los mejores juegos relacionados con Death Squad: The Last Mission.">
+<meta name="twitter:image" content="https://img-hws.y8.com/cloud/v2-y8-thumbs-thumbnail464x348s-001/5731/thumbnail464x348.gif">
+
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://img-hws.y8.com/assets/y8/favicon-bbe12bfef74c2df2549976cea58ab563413321d756246b64c4ba941d55118b56.ico" />
+    <link rel="alternate" type="application/rss+xml" title="y8.com RSS" href="https://es.y8.com/feed" />
+    <link rel="alternate" href="https://www.y8.com/games/death_squad_the_last_mission" hreflang="en" />
+<link rel="alternate" href="https://ru.y8.com/games/death_squad_the_last_mission" hreflang="ru" />
+<link rel="alternate" href="https://fr.y8.com/games/death_squad_the_last_mission" hreflang="fr" />
+<link rel="alternate" href="https://de.y8.com/games/death_squad_the_last_mission" hreflang="de" />
+<link rel="alternate" href="https://it.y8.com/games/death_squad_the_last_mission" hreflang="it" />
+<link rel="alternate" href="https://el.y8.com/games/death_squad_the_last_mission" hreflang="el" />
+<link rel="alternate" href="https://he.y8.com/games/death_squad_the_last_mission" hreflang="he" />
+<link rel="alternate" href="https://hi.y8.com/games/death_squad_the_last_mission" hreflang="hi" />
+<link rel="alternate" href="https://ro.y8.com/games/death_squad_the_last_mission" hreflang="ro" />
+<link rel="alternate" href="https://es.y8.com/games/death_squad_the_last_mission" hreflang="es" />
+<link rel="alternate" href="https://tl.y8.com/games/death_squad_the_last_mission" hreflang="tl" />
+<link rel="alternate" href="https://th.y8.com/games/death_squad_the_last_mission" hreflang="th" />
+<link rel="alternate" href="https://zh.y8.com/games/death_squad_the_last_mission" hreflang="zh" />
+<link rel="alternate" href="https://nl.y8.com/games/death_squad_the_last_mission" hreflang="nl" />
+<link rel="alternate" href="https://vi.y8.com/games/death_squad_the_last_mission" hreflang="vi" />
+<link rel="alternate" href="https://tr.y8.com/games/death_squad_the_last_mission" hreflang="tr" />
+<link rel="alternate" href="https://pt.y8.com/games/death_squad_the_last_mission" hreflang="pt" />
+<link rel="alternate" href="https://pl.y8.com/games/death_squad_the_last_mission" hreflang="pl" />
+<link rel="alternate" href="https://ko.y8.com/games/death_squad_the_last_mission" hreflang="ko" />
+<link rel="alternate" href="https://ja.y8.com/games/death_squad_the_last_mission" hreflang="ja" />
+<link rel="alternate" href="https://id.y8.com/games/death_squad_the_last_mission" hreflang="id" />
+<link rel="alternate" href="https://ar.y8.com/games/death_squad_the_last_mission" hreflang="ar" />
+<link rel="alternate" href="https://www.y8.com/games/death_squad_the_last_mission" hreflang="x-default" />
+
+    <link rel="stylesheet" media="screen" href="https://img-hws.y8.com/assets/bootstrap-bd1292dd3fd085f31a24b837576e41ab39e6559dbca8185d40a035b3d97b5a60.css" />
+      <link rel="stylesheet" media="screen" href="https://img-hws.y8.com/assets/y8.com/latin-9dd5134ed5e0b9b27929470eee7cc5956e2addd0f27714e085b640fd20463c8e.css" />
+
+    <link rel="icon" sizes="192x192" href="/mobile_launch_icons/y8-192.png">
+    <link rel="apple-touch-icon" href="/mobile_launch_icons/y8-192.png">
+
+    <script src="https://img-hws.y8.com/assets/ads_block-9e6b3c011a0337e74cb80bc679b2cc05022dc215aea49597ae7e599ead824784.js"></script>
+    <script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+
+  var pbjs = pbjs || {};
+  pbjs.que = pbjs.que || [];
+</script>
+<script async='async' src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+<script src="https://img-hws.y8.com/assets/gam_prebid-35dfbb7600cde9e1d9211e02060a8d5d8060d53c5ea53a83afdaa617d98f6bab.js"></script>
+
+      <script
+  id="display-ad-manager"
+  data-key="y8"
+  data-value="default"
+  data-slot-below=""
+  data-slot-above="/83578953/Y8_Top_of_Games"
+  data-slot-right-up="/83578953/Y8_Right_of_games_1"
+  data-slot-right-down="/83578953/Y8_Right_of_games_2"
+  data-show-ads="true"
+  data-revenue-share="">
+</script>
+
+  <script
+  id="video-ad-manager"
+  data-key="y8"
+  data-value="default"
+  data-mobile-video-tag="https://pubads.g.doubleclick.net/gampad/ads?iu=/83578953/y8/video&ad_type=image_text&env=vp&impl=s&correlator=&tfcd=0&npa=0&gdfp_req=1&output=vast&sz=640x480&ciu_szs=250x250,300x250,728x90&max_ad_duration=30000&unviewed_position_start=1"
+  data-video-tag="https://pubads.g.doubleclick.net/gampad/ads?iu=/83578953/y8/video&env=vp&impl=s&correlator=&tfcd=0&npa=0&gdfp_req=1&output=vast&sz=640x480&ciu_szs=250x250,300x250,728x90&max_ad_duration=30000&unviewed_position_start=1"
+  data-show-ads="true"
+  data-revenue-share="">
+</script>
+
+
+    <script src="https://img-hws.y8.com/assets/y8-fde58619338c1056fa21dfe865aed0ce630d6b5fec302ef09032caab8928b0af.js"></script>
+
+    <link rel="alternate" href="/games/death_squad_the_last_mission/webgl" id="unity_webgl_game_url" />    <link rel="alternate" href="/games/death_squad_the_last_mission.js" class="xhr" />
+
+    <script id="item_slug" type="text/x-variable" data-item-slug="death_squad_the_last_mission"></script>
+
+    <script id="track-tog" type="text/x-variable" data-post-url="/items/157055/tog"></script>
+
+    <script
+  id="item-ad-loader"
+  type="text/x-variable"
+  data-loader="Html5Loader"
+  data-item-width="864"
+  data-item-height="580"
+  data-device="desktop">
+</script>
+
+
+
+    <link rel="canonical" href="https://es.y8.com/games/death_squad_the_last_mission" />
+  </head>
+
+  <body  class="item_versions show games-active items" data-controller="Items" data-action="show" data-filter-compatibility-games="true" data-auth-success-path="/auth/idnet/callback" data-item-id="157055" data-idnet-app-id="5b29372bd5593048e7b17892" data-leaderboard-api-url="https://account.y8.com/api/v1/json/leaderboard">
+    <div class="features-overlay" onclick="location.href='/admin/features';"></div>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="y8-navbar-left">
+          <div class="mobile-burger-menu">
+            <span class="burger-btn">
+              <img class="hamburger-icon" src="https://img-hws.y8.com/assets/svg/hamburger-8d7cfec062d86df51772f1f0f4be596951c5cdada565ca20a13295292821ef57.svg" alt="Hamburger" />
+              <img class="hamburger-active-icon" src="https://img-hws.y8.com/assets/svg/hamburger-active-38ae565484c4a0cc2229a5d63af780f626f4d4048e2ff517ccca53ca5fe25a59.svg" alt="Hamburger active" />
+            </span>
+          </div>
+          <div class="logo">
+            <a class="no-event" aria-label="logo" href="https://es.y8.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 45">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#000" d="M36 0h9v18h-9V0zm-9 18h9v9h-9v-9zM9 18h9v9H9v-9zm9 9h9v18h-9V27zM0 0h9v18H0V0z"/>
+    <path fill="#E81919" d="M62 0h29v9H62V0zm29 9h9v9h-9V9zM53 9h9v9h-9V9zm0 18h9v9h-9v-9zm9-9h29v9H62v-9zm0 18h29v9H62v-9zm29-9h9v9h-9v-9z"/>
+  </g>
+</svg>
+
+<img src="https://img-hws.y8.com/assets/y8/logo-header-68adbbce03b92e0b47b4e43fdf321a597d4ed2324c117f0eca1b0a9abe43f3f0.png" alt="Logo header" />
+</a>
+          </div>
+
+          <div class="games-videos-switch game">
+  <a href="https://es.y8.com/anim">
+    <div class="games-link">juegos</div>
+    <div class="videos-link">vídeos</div>
+  </a>
+</div>
+
+
+          <div class="mobile-search-user-container">
+            <div class="search-btn">
+			        <img src="https://img-hws.y8.com/assets/svg/search-04f11c537d12ffb9c581d6db12299f64c194023ad1764aa6468d219d8eac7d6b.svg" alt="Search" />
+            </div>
+            <div class="profile-btn">
+              <img class="profile-icon avatar" src="https://img-hws.y8.com/assets/svg/profile-5dc44aa6f00fba6c11abc00c5be2811efeef4d1e658135792609df83fbb424e4.svg" alt="Profile" />
+              <img class="arrow-up-icon" src="https://img-hws.y8.com/assets/svg/arrow-up-e4cc9470db4c0de730f793c47131253c61d90b8aa1db3c0d3db1e5f84dc6c13b.svg" alt="Arrow up" />
+            </div>
+          </div>
+        </div><!--
+
+        --><form id="items-search-form" class="navbar-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+
+          <input type="hidden" name="kind" id="kind" value="game" />
+          <input type="text" name="q" id="q" placeholder="Buscar juegos" class="form-control query fake-button" required="required" minlength="2" maxlength="50" pattern=".{2,50}" title="Debe de estar entre 2 y 50" />
+          <button type="submit" aria-label="Search">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+          <span class="close-search-form"></span>
+        </form><!--
+
+        --><div class="y8-navbar-right">
+
+          <a class="fake-button js-top-menu two-lines btn-header-actions new-games" data-menu="newgames" href="#">
+              Juegos nuevos
+            <span class="shevron"></span>
+            <span class="sub-title">
+                Próximo en&nbsp;
+              <span class="release-countdown">00:00</span>
+            </span>
+          </a><!--
+
+          --><div class="newgames-menu sub-menu">
+            <div class="newgames-container">
+  <ul>
+    <li>
+      <a class="new_games" href="https://es.y8.com/new/games">
+        <div class="name">
+            Por fecha
+        </div>
+        <div id="new-items-count-next-in" class="number">
+          Próxima adición en
+          <span class="release-countdown">00:00</span>
+        </div>
+</a>    </li>
+    <li class="hr"></li>
+    <li>
+      <a class="best_new_games" href="https://es.y8.com/games/best">
+        <div class="name">
+            Más gustados
+        </div>
+        <div id="new-items-count-best-games" class="number">
+            Mejores juegos de los últimos 2 meses
+        </div>
+</a>    </li>
+  </ul>
+</div>
+
+          </div><!--
+
+          --><a class="fake-button js-top-menu two-lines btn-header-actions browse" data-menu="browse" href="#">
+            Categorías
+            <span class="shevron"></span>
+            <span class="sub-title">
+              &amp; más
+            </span>
+            <div class="with-notification"></div>
+          </a><!--
+
+          --><div class="browse-menu sub-menu">
+              <div class="browse-container">
+
+  <div class="label-uppercase">
+    LIBRERÍA
+  </div>
+
+  <ul>
+    <li>
+      <a class="new_games" href="https://es.y8.com/new/games">
+        <div class="name">
+            Juegos nuevos
+        </div>
+        <div id="new-items-count-next-in-browse" class="number">
+          Próximo en
+          <span class="release-countdown">00:00</span>
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="best_new_games" href="https://es.y8.com/games/best">
+        <div class="name">
+            Los mejores juegos nuevos
+        </div>
+        <div id="new-items-count-best-page" class="number">
+          1382
+          juegos
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="popular_games" href="https://es.y8.com/popular/games">
+        <div class="name">
+            Juegos más populares
+        </div>
+        <div id="new-items-count-popular-page" class="number">
+          21764
+          juegos
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="played_games visited_items" style="text-decoration:none;" href="/profile/played_games">
+        <div class="name">Juegos Que Has Jugado</div>
+        <div id="visited-items-count" class="number"></div>
+</a>    </li>
+
+    <li>
+      <a class="liked_games liked_items" style="text-decoration:none;" href="/profile/liked_games">
+        <div class="name">Juegos Que Te Han Gustado</div>
+        <div id="liked-items-count" class="number"></div>
+</a>    </li>
+
+      <li>
+        <a class="recommended_games recommended_items" style="text-decoration:none;" href="/profile/recommended_games">
+          <div class="name">Juegos Recomendados</div>
+          <div id="recommended-items-count" class="number"></div>
+</a>      </li>
+  </ul>
+
+  <hr>
+
+  <div class="label-uppercase">
+    CATEGORÍAS
+  </div>
+
+  <ul>
+  <!-- DO NOT CHANGE THIS : -->
+    <li class="inactive girls li-category">
+      <a class="girls" title="Juegos para Chicas" href="https://es.y8.com/categories/girls"><span class="name">Juegos para Chicas</span>
+<span class="number">24,603 juegos</span>
+</a>
+</li>    <li class="inactive driving_racing li-category">
+      <a class="driving_racing" title="Juegos de Conducción &amp; Carreras" href="https://es.y8.com/categories/driving_racing"><span class="name">Juegos de Conducción &amp; Carreras</span>
+<span class="number">6,483 juegos</span>
+</a>
+</li>    <li class="inactive strategy li-category">
+      <a class="strategy" title="Juegos de Estrategia &amp; RPG" href="https://es.y8.com/categories/strategy"><span class="name">Juegos de Estrategia &amp; RPG</span>
+<span class="number">3,650 juegos</span>
+</a>
+</li>    <li class="inactive management li-category">
+      <a class="management" title="Juegos de Gestión" href="https://es.y8.com/categories/management"><span class="name">Juegos de Gestión</span>
+<span class="number">4,302 juegos</span>
+</a>
+</li>    <li class="inactive thinking li-category">
+      <a class="thinking" title="Juegos de Pensar" href="https://es.y8.com/categories/thinking"><span class="name">Juegos de Pensar</span>
+<span class="number">13,013 juegos</span>
+</a>
+</li>    <li class="inactive action_adventure li-category">
+      <a class="action_adventure" title="Juegos de Acción &amp; Aventura" href="https://es.y8.com/categories/action_adventure"><span class="name">Juegos de Acción &amp; Aventura</span>
+<span class="number">14,902 juegos</span>
+</a>
+</li>    <li class="inactive sports li-category">
+      <a class="sports" title="Juegos de Deportes" href="https://es.y8.com/categories/sports"><span class="name">Juegos de Deportes</span>
+<span class="number">3,398 juegos</span>
+</a>
+</li>    <li class="inactive shooting li-category">
+      <a class="shooting" title="Juegos de Disparos" href="https://es.y8.com/categories/shooting"><span class="name">Juegos de Disparos</span>
+<span class="number">9,162 juegos</span>
+</a>
+</li>    <li class="inactive fighting li-category">
+      <a class="fighting" title="Juegos de Peleas" href="https://es.y8.com/categories/fighting"><span class="name">Juegos de Peleas</span>
+<span class="number">2,088 juegos</span>
+</a>
+</li>    <li class="inactive skill li-category">
+      <a class="skill" title="Juegos de Habilidad" href="https://es.y8.com/categories/skill"><span class="name">Juegos de Habilidad</span>
+<span class="number">11,776 juegos</span>
+</a>
+</li>    <li class="inactive arcade_classic li-category">
+      <a class="arcade_classic" title="Juegos Arcade &amp; Clásicos" href="https://es.y8.com/categories/arcade_classic"><span class="name">Juegos Arcade &amp; Clásicos</span>
+<span class="number">9,762 juegos</span>
+</a>
+</li>    <li class="inactive fun li-category">
+      <a class="fun" title="Juegos Divertidos &amp; Locos" href="https://es.y8.com/categories/fun"><span class="name">Juegos Divertidos &amp; Locos</span>
+<span class="number">5,005 juegos</span>
+</a>
+</li>  <!-- END OF : DO NOT CHANGE THIS -->
+  </ul>
+
+</div>
+
+
+<div class="sub-menu-footer sub-menu-footer-grey">
+  <!-- DO NOT CHANGE THIS, NEITHER IT'S CONTENT -->
+    <div class="stats">
+  <div class="text-uppercase">
+    Jugar con amigos <br />
+    Potenciado por Y8 Account
+  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_account/multiplayer">
+      <div class="number">
+        149
+      </div>
+      <div class="description">
+        Juegos Multijugador de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_highscore">
+      <div class="number">
+        2,234
+      </div>
+      <div class="description">
+        Mejores Puntuaciones de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_achievements">
+      <div class="number">
+        1,285
+      </div>
+      <div class="description">
+        Logros de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_screenshot">
+      <div class="number">
+        916
+      </div>
+      <div class="description">
+        Captura de pantalla de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_save">
+      <div class="number">
+        1,740
+      </div>
+      <div class="description">
+        Guardado En Línea de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://es.y8.com/tags/y8_account">
+      <div class="number">
+        3,471
+      </div>
+      <div class="description">
+        Todos los Juegos de Y8
+      </div>
+      <div>
+        Juegos
+      </div>
+</a>  </div>
+</div>
+
+      <div class="last-highscore">
+    <div class="text-uppercase" style="padding:0;">Puntuación Alta Más Reciente:</div>
+    <div class="author-points">
+      <p>
+        <a target="_blank" href="/users/5d8e44adbbddbd9ffba3c8d6/Guga">
+          <img alt="Guga avatar" src="https://cdn.y8.com/profile_pictures/5efd08b2e694aa0969e0dc5e-large.jpg" />
+</a>        <b>11,622,275</b>
+        puntos en
+        <a target="_blank" rel="noreferrer" href="https://www.y8.com/games/death_chase">Death Chase</a>
+        por
+        <a target="_blank" href="/users/5d8e44adbbddbd9ffba3c8d6/Guga">Guga</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-links-box"><div class="social-link-box">
+  <div class="help-us-improve-box">
+    <div class="label-uppercase" >
+      Ayúdanos a mejorar
+    </div>
+    <a class="translate-report" href="https://es.y8.com/contact/new">¿Traducción incorrecta?</a>
+  </div>
+
+  <div class="label-uppercase" >
+    Social
+  </div>
+
+  <div class="addthis_default_style">
+    <!-- AddThis Button BEGIN -->
+<a class="addthis_counter addthis_pill_style" addthis:url="https://es.y8.com" addthis:title="Juegos Y8: Juega juegos en línea gratis en Y8.com"></a>
+
+<div class="social-widget">
+  <div class="social-widget-partial" data-target-class="add-this-widget" data-html-tag="script" data-src="https://s7.addthis.com/js/300/addthis_widget.js#domready=1&pubid=addy8"></div>
+</div>
+
+<!-- AddThis Button END -->
+
+  </div>
+
+  <div class="twitter-widget social-widget">
+  <a href="https://twitter.com/y8_com" class="twitter-follow-button" data-size="large" data-show-count="false">
+  	Follow @y8_com
+  </a>
+  <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
+  <div class="instagram-widget social-widget">
+  <a href="https://www.instagram.com/y8.games/" class="instagram-follow-button" target="_blank" rel="noreferrer nofollow">
+    <div
+      class="social-widget-partial"
+      data-target-class="instagram-widget-img"
+      data-src="https://img-hws.y8.com/assets/y8/instagram-867373844cafacc0865533d8f3884a033ff80db463deb3ab6d1c6861aeca55d4.png"
+      data-html-tag="img">
+      <img src="https://img-hws.y8.com/assets/svg/instagram_icon-6ec8d6ed1d6762e148ba2b543762a328eabccc1b0af1ebd4864ce96baaee8e36.svg" alt="Instagram">
+    </div>
+    <div class="instagram-widget-img"></div>
+  </a>
+</div>
+
+  <div class="facebook-widget social-widget">
+  <div class="social-widget-partial" data-target-class="facebook-widget" data-html-tag="iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FY8-Games-225100494185683%2F&width=95&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=267266673296925" width="180" height="30" data-style="border:none;overflow:hidden" data-scrolling="no" data-frameborder="0" data-allowTransparency="true">
+    <img src="https://img-hws.y8.com/assets/svg/facebook_icon-057109b9febbf006a63af2bbc4ddd27c3261cd69f40a9bf4a27cbf24445a300b.svg" alt="Facebook">
+  </div>
+</div>
+
+</div>
+
+<ul class="nav nav-sidebar others">
+  <li><a href="https://es.y8.com/tags">Ver Todas Las Etiquetas</a></li>
+  <li><a href="https://static.y8.com/upload">Subir</a></li>
+  <li><a href="https://es.y8.com/games_for_your_website">Juegos para tu Página web</a></li>
+  <li><a href="https://es.y8.com/download-app">Download App</a></li>
+  <li><a href="https://es.y8.com/privacy">Políticas de Privacidad</a></li>
+  <li><a href="https://es.y8.com/cookie-policy">Política de Cookies</a></li>
+  <li><a href="https://es.y8.com/terms">Términos de Uso</a></li>
+  <li><a href="https://blog.y8.com/">Blog</a><div class="link-with-icon"></div></li>
+  <li style="background-image: none;"><a href="https://forum.y8.com">Forum</a></li>
+</ul>
+</div>
+  <!-- END OF :  DO NOT CHANGE THIS, NEITHER IT'S CONTENT -->
+</div>
+
+          </div><!--
+
+          --><div class="waiting-idnet">
+
+              <div id="user_not_logged_in" style="display:none;">
+                <button type="button" class="fake-button fake-button-red idnet-fast-register-link">
+                  Registrarse
+                </button><!--
+                --><button type="button" class="fake-button idnet-fast-login-link">
+                  Iniciar sesión
+                </button>
+              </div>
+
+              <div id="user_logged_in" style="display:none;">
+                <a class="fake-button js-top-menu user-toggle" data-menu="account" href="#">
+                  <img class="avatar" src="https://img-hws.y8.com/assets/y8/default_avatar-b95766a9a753f0006659f8cc583a705d09e260787fccdc47bfdabca911b80666.png" alt="Default avatar" />
+</a>
+                <div class="links-container-container">
+                  <div class="links-container sub-menu" style="display:none;">
+                    <div class="sub-menu-header">
+                      <span class="username username_box">
+                        Mi perfil
+                      </span>
+                      <span class="js-user-idnet-points"></span>
+                      <span class="points">puntos</span>
+                    </div>
+                    <ul>
+                      <li><a class="account-menu-link" id="account-menu-link-profile" href="#">Mi perfil</a></li>
+                      <li>
+                        <a target="blank" class="account-menu-link" id="account-menu-link-edit-profile" href="#">Editar perfil</a>
+                      </li>
+                      <li>
+                        <a class="account-menu-link" id="account-menu-link-games" href="#">
+                          Mis juegos
+                          (<span class="js-favorites-count"></span>)
+</a>                      </li>
+                      <li>
+                        <a class="account-menu-link" id="account-menu-link-visited" destination="/profile/played_games" href="#">
+                          Juegos Que Has Jugado
+</a>                      </li>
+                      <li>
+                        <a class="account-menu-link" id="account-menu-link-my-revenue" destination="/profile/revenue_share" style="display: none;" href="#">
+                          My Revenue
+</a>                      </li>
+                    </ul>
+                    <div class="sub-menu-footer">
+                      <ul>
+                        <li>
+                          <a class="account-menu-link logout" style="margin:0;" href="#">Cerrar sesión</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div><!--
+
+          --><div class="fake-button parental-control">
+            <div class="js-top-menu parental-control-link" data-menu="parental"></div>
+            <a class="parental-control-link-hidden" data-remote="true" href="/parental_filters/new"></a>
+          </div><!--
+          --><div id="parental-filter-form" class="parental-filter-form sub-menu"></div><!--
+
+          --><div id="locale-selector-dropdown" class='locale-selector-dropdown fake-button'>
+                 <ul>
+    <li>
+  <a class="es locale-chooser js-top-menu" aria-label="Language selector" data-menu="locale" href="https://es.y8.com">
+      <div class="flag es">&nbsp;</div>
+    <div class="locale-name">Español</div>
+</a></li>
+
+  </ul>
+  <div class="locales-container-container locales-container sub-menu">
+    <ul>
+      <li>
+  <a class="en locale-link" aria-label="Language selector" href="https://www.y8.com">
+      <div class="flag en">&nbsp;</div>
+    <div class="locale-name">English</div>
+</a></li>
+<li>
+  <a class="ru locale-link" aria-label="Language selector" href="https://ru.y8.com">
+      <div class="flag ru">&nbsp;</div>
+    <div class="locale-name">Руcский</div>
+</a></li>
+<li>
+  <a class="fr locale-link" aria-label="Language selector" href="https://fr.y8.com">
+      <div class="flag fr">&nbsp;</div>
+    <div class="locale-name">Français</div>
+</a></li>
+<li>
+  <a class="de locale-link" aria-label="Language selector" href="https://de.y8.com">
+      <div class="flag de">&nbsp;</div>
+    <div class="locale-name">Deutsch</div>
+</a></li>
+<li>
+  <a class="it locale-link" aria-label="Language selector" href="https://it.y8.com">
+      <div class="flag it">&nbsp;</div>
+    <div class="locale-name">Italiano</div>
+</a></li>
+<li>
+  <a class="el locale-link" aria-label="Language selector" href="https://el.y8.com">
+      <div class="flag el">&nbsp;</div>
+    <div class="locale-name">Ελληνικά</div>
+</a></li>
+<li>
+  <a class="he locale-link" aria-label="Language selector" href="https://he.y8.com">
+      <div class="flag he">&nbsp;</div>
+    <div class="locale-name">עברית</div>
+</a></li>
+<li>
+  <a class="hi locale-link" aria-label="Language selector" href="https://hi.y8.com">
+      <div class="flag hi">&nbsp;</div>
+    <div class="locale-name">हिंदी</div>
+</a></li>
+<li>
+  <a class="ro locale-link" aria-label="Language selector" href="https://ro.y8.com">
+      <div class="flag ro">&nbsp;</div>
+    <div class="locale-name">Română</div>
+</a></li>
+<li>
+  <a class="es locale-link" aria-label="Language selector" href="https://es.y8.com">
+      <div class="flag es">&nbsp;</div>
+    <div class="locale-name">Español</div>
+</a></li>
+<li>
+  <a class="tl locale-link" aria-label="Language selector" href="https://tl.y8.com">
+      <div class="flag tl">&nbsp;</div>
+    <div class="locale-name">Tagalog</div>
+</a></li>
+<li>
+  <a class="th locale-link" aria-label="Language selector" href="https://th.y8.com">
+      <div class="flag th">&nbsp;</div>
+    <div class="locale-name">ไทย</div>
+</a></li>
+<li>
+  <a class="zh locale-link" aria-label="Language selector" href="https://zh.y8.com">
+      <div class="flag zh">&nbsp;</div>
+    <div class="locale-name">中文</div>
+</a></li>
+<li>
+  <a class="nl locale-link" aria-label="Language selector" href="https://nl.y8.com">
+      <div class="flag nl">&nbsp;</div>
+    <div class="locale-name">Nederlands</div>
+</a></li>
+<li>
+  <a class="vi locale-link" aria-label="Language selector" href="https://vi.y8.com">
+      <div class="flag vi">&nbsp;</div>
+    <div class="locale-name">Việt</div>
+</a></li>
+<li>
+  <a class="tr locale-link" aria-label="Language selector" href="https://tr.y8.com">
+      <div class="flag tr">&nbsp;</div>
+    <div class="locale-name">Türkçe</div>
+</a></li>
+<li>
+  <a class="pt locale-link" aria-label="Language selector" href="https://pt.y8.com">
+      <div class="flag pt">&nbsp;</div>
+    <div class="locale-name">Português</div>
+</a></li>
+<li>
+  <a class="pl locale-link" aria-label="Language selector" href="https://pl.y8.com">
+      <div class="flag pl">&nbsp;</div>
+    <div class="locale-name">Polski</div>
+</a></li>
+<li>
+  <a class="ko locale-link" aria-label="Language selector" href="https://ko.y8.com">
+      <div class="flag ko">&nbsp;</div>
+    <div class="locale-name">한국어</div>
+</a></li>
+<li>
+  <a class="ja locale-link" aria-label="Language selector" href="https://ja.y8.com">
+      <div class="flag ja">&nbsp;</div>
+    <div class="locale-name">日本語</div>
+</a></li>
+<li>
+  <a class="id locale-link" aria-label="Language selector" href="https://id.y8.com">
+      <div class="flag id">&nbsp;</div>
+    <div class="locale-name">Indonesia</div>
+</a></li>
+<li>
+  <a class="ar locale-link" aria-label="Language selector" href="https://ar.y8.com">
+      <div class="flag ar">&nbsp;</div>
+    <div class="locale-name">العربية</div>
+</a></li>
+
+    </ul>
+  </div>
+
+            </div>
+
+            <div class="mobile-header-block">
+              <div class="games-videos-switch game">
+  <a href="https://es.y8.com/anim">
+    <div class="games-link">juegos</div>
+    <div class="videos-link">vídeos</div>
+  </a>
+</div>
+
+              <div class="popular-newest-games-links">
+    <a class="games-link new-game fake-button" href="https://es.y8.com/new/games">Juegos nuevos</a>
+    <a class="games-link pop-game fake-button" href="https://es.y8.com/games/best">Juegos más populares</a>
+</div>
+
+
+            </div>
+        </div>
+      </div>
+
+      <div id="flash-messages-box" class="flash-messages-box">
+        <div class="flash-notice">
+  <div class="container">
+    <div id="flash-notice" class="flash"></div>
+    <div class="close">&#215;</div>
+  </div>
+</div>
+
+<div class="flash-alert">
+  <div class="container">
+    <div id="flash-alert" class="flash flash-alert"></div>
+    <div class="close">&#215;</div>
+  </div>
+</div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+      
+
+
+
+
+
+
+<script type="application/ld+json">
+{"@context":"http://schema.org","@type":"WebApplication","applicationCategory":"Game","url":"https://es.y8.com/games/death_squad_the_last_mission","name":"Death Squad: The Last Mission","image":"https://img-hws.y8.com/cloud/v2-y8-thumbs-thumbnail464x348s-001/5731/thumbnail464x348.gif","datePublished":"2018-08-02T01:07:08Z","browserRequirements":"WebGL","aggregateRating":{"@type":"AggregateRating","ratingValue":80,"ratingCount":8650,"bestRating":"100","worstRating":"0"},"description":"Death Squad: The Last Mission is a first-person 3D shooting WebGL game that will challenge your shooting and survival skills to the test! In this game, your chopper has crashed down to an abandoned area which is near at the enemy base. Your team has survived the crash but will all of you survive the attack of your rival soldiers. Together with your team, you need to hold your position as long as you can. With limited supply of ammunitions, you need to get though every wave of attack. There will be a 20 second warm up time before every wave. Use that time to loot for weapons, ammunitions and med kits that will spawn around the area. Your enemy will increase every wave, so you need to gather more ammunition and med kits as you can for it will help you survive. There are 12 achievements that you can unlock from easy, medium and hard. Get points by killing your opponents and earn as much as you can so you can be listed together with the pros of this game in the leaderboard. Take part on this mission and be one of the unstoppable Death Squad!"}
+</script>
+
+
+
+<div class="row item-show">
+  <div class="item-rendering">
+    <div id="Y8_Top_of_Games" class="div-gpt-ad-above">
+      <script>
+        googletag.cmd.push(function() { googletag.display('Y8_Top_of_Games'); });
+      </script>
+    </div>
+    <div class="box no-padding">
+      <div class="content">
+
+          <div
+            class="background-under-game"
+            style="background: url(https://es.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/113906/small.gif)">
+          </div>
+
+        <div id="item-resizer" class="item-resizer">
+  <div class="adjust-layer">
+    <div class="title">Ajustar game tamaño de pantalla</div>
+
+    <div class="resizer">
+      <a class="item-resizer-resize-button out" data-direction="down" href="#">
+        <img src="https://img-hws.y8.com/assets/svg/resize_out_icon-3150bf7f488494389969aa643d1bdecead70810b6dff7bf1d94153927e1d06f7.svg" alt="Resize out">
+</a>
+      <div class="slider-container">
+        <div id="item-resizer-slider" class="item-resizer-slider" data-min="300" data-step="10"></div>
+      </div>
+
+      <a class="item-resizer-resize-button in" data-direction="up" href="#">
+        <img src="https://img-hws.y8.com/assets/svg/resize_in_icon-c271d2672b133fb7bdc44d94a977874352e63874cc5e7351a0eb4889660aa720.svg" alt="Resize in">
+</a>
+      <label for="item-resizer" id="item-resizer-label" class="percentage">
+        <span>100</span>%
+      </label>
+
+      <a id="item-resizer-reset-size-button" class="item-resizer-reset-size-button" href="#">
+        <img src="https://img-hws.y8.com/assets/svg/resize_reset_button-22d627a7985e41bda3535612613826d897d9098dcff64b0ad74b5a3b885578ba.svg" alt="Resize">
+        <span>Resetear</span>
+</a>    </div>
+
+    <div class="right-part">
+      <a id="item-resizer-remove-adjust-button" class="item-resizer-remove-adjust-button" href="#">
+        <img src="https://img-hws.y8.com/assets/svg/done_icon-18ae9be0e3e7270b272ecbe49ba5bb3e029625f86a858cdc262fd34576e98440.svg" alt="Done">
+        <span>Hecho</span>
+</a>    </div>
+  </div>
+</div>
+
+
+        <div id="item-container" class="item-container" data-item-height="580" data-item-width="864" data-item-supports-resizing="false" data-item-ratio-tolerant="false" data-maximize="false" data-focus-object="false" data-focus-html5-content="false">
+            <div id="html5-ima-overlay"
+  class="html5-ima-overlay smart-frame-item-direct-container"
+  data-supports-resizing="false"
+  data-ratio-tolerant="false"
+  width="864"
+  height="580"
+  style="width:864px;height:580px;">
+  <div id="html5-ima-loading" class="html5-ima-loading"></div>
+  <div id="html5-ima" class="html5-ima">
+  </div>
+  <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/outstream.js"></script>
+</div>
+
+
+          <iframe
+  id='html5-content'
+  class='item-direct-container resizable'
+  width='864'
+  height='580'
+  allow='autoplay'
+    allowfullscreen
+  frameBorder='0'
+  scrolling='no'
+  data-src='https://storage.y8.com/y8-studio/unity/rogov2099/dstlm_web_memory_fix/?key=y8&value=default'
+></iframe>
+
+
+
+</div>
+        <div class="game-control-container">
+          <div class="left-control-container">
+                <h5 class="game-control-title">
+                  Controles del juego:
+                </h5>
+                  <div class="keys-for-game centered-list">
+  <ul>
+      <li>
+          <div class="key-definition key-definition-q-s-d-z-arrow-wasd">
+            <div class="keyboard-key key-q"></div><div class="keyboard-key key-s"></div><div class="keyboard-key key-d"></div><div class="keyboard-key key-z"></div><div class="keyboard-key key-arrow"></div><div class="keyboard-key key-wasd"></div>
+            <div class="action-text-container">
+              Move
+            </div>
+          </div>
+          <div class="key-definition key-definition-q-e">
+            <div class="keyboard-key key-q"></div><div class="keyboard-key key-e"></div>
+            <div class="action-text-container">
+              Lean Left/Right
+            </div>
+          </div>
+          <div class="key-definition key-definition-space">
+            <div class="keyboard-key key-space"></div>
+            <div class="action-text-container">
+              Jump
+            </div>
+          </div>
+          <div class="key-definition key-definition-shift">
+            <div class="keyboard-key key-shift"></div>
+            <div class="action-text-container">
+              (Left): Sprint
+            </div>
+          </div>
+          <div class="key-definition key-definition-ctrl">
+            <div class="keyboard-key key-ctrl"></div>
+            <div class="action-text-container">
+              (Left): Crouch
+            </div>
+          </div>
+          <div class="key-definition key-definition-l">
+            <div class="keyboard-key key-l"></div>
+            <div class="action-text-container">
+              Lock or Unlock Cursor
+            </div>
+          </div>
+          <div class="key-definition key-definition-p">
+            <div class="keyboard-key key-p"></div>
+            <div class="action-text-container">
+              Pause
+            </div>
+          </div>
+      </li>
+      <li>
+          <div class="key-definition key-definition-mouse2">
+            <div class="keyboard-key key-mouse2"></div>
+            <div class="action-text-container">
+              Shoot
+            </div>
+          </div>
+          <div class="key-definition key-definition-mouse3">
+            <div class="keyboard-key key-mouse3"></div>
+            <div class="action-text-container">
+              Zoom/Block
+            </div>
+          </div>
+          <div class="key-definition key-definition-r">
+            <div class="keyboard-key key-r"></div>
+            <div class="action-text-container">
+              Reload
+            </div>
+          </div>
+          <div class="key-definition key-definition-f">
+            <div class="keyboard-key key-f"></div>
+            <div class="action-text-container">
+              Use Item
+            </div>
+          </div>
+          <div class="key-definition key-definition-c">
+            <div class="keyboard-key key-c"></div>
+            <div class="action-text-container">
+              Use Heal Kit
+            </div>
+          </div>
+          <div class="key-definition key-definition-32">
+            <div class="keyboard-key key-32"></div>
+            <div class="action-text-container">
+              (Backspace): Drop Weapon
+            </div>
+          </div>
+          <div class="key-definition key-definition-g">
+            <div class="keyboard-key key-g"></div>
+            <div class="action-text-container">
+              Throw Grenade
+            </div>
+          </div>
+          <div class="key-definition key-definition-92">
+            <div class="keyboard-key key-92"></div>
+            <div class="action-text-container">
+              Select Grenade
+            </div>
+          </div>
+          <div class="key-definition key-definition-t">
+            <div class="keyboard-key key-t"></div>
+            <div class="action-text-container">
+              Enter Bullet Time
+            </div>
+          </div>
+          <div class="key-definition key-definition-z">
+            <div class="keyboard-key key-z"></div>
+            <div class="action-text-container">
+              Toggle Deadzone Aiming
+            </div>
+          </div>
+      </li>
+  </ul>
+</div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="game-info-container infos" id="details">
+        <div class="left-part">
+          <h1>
+            Death Squad: The Last Mission
+          </h1>
+          <div class="sub-infos">
+            <span class="sub-infos-line">
+              <span>Reproducido 7,195,173 veces</span>
+            </span>
+          </div>
+
+            <div class="row sub-controls">
+              <div class="col-md-12 fav-part">
+                <a class="heart hearted_add" rel="nofollow" data-action="heart" data-url="/profile/hearted_items" data-item-id="157055">
+  <div class="heart-message">
+    <div class="message-container">
+      Add this game to your profile’s TOP 3 loved list.
+    </div>
+  </div>
+  <div class="game-button-icon heart-icon"></div>
+</a>
+<a class="heart active hearted_remove" style="display:none;" rel="nofollow" data-action="unheart" data-url="/profile/hearted_items/157055">
+  <div class="game-button-icon heart-icon-active"></div>
+</a>
+<a class="favorite favorites_add" style="display:none;" rel="nofollow" data-action="add" data-url="/profile/favorited_items" data-item-id="157055">
+  <div class="game-button-icon favorite-icon"></div>
+  <span>Agregar a tus favoritos</span>
+</a>
+<a class="favorite active favorites_remove" style="display:none;" rel="nofollow" data-action="remove" data-url="/profile/favorited_items/157055">
+  <div class="game-button-icon favorite-icon-active"></div>
+  <span>Eliminar de tus favoritos</span>
+</a>
+<div class="addthis-default-style">
+  <!-- AddThis Button BEGIN -->
+<a class="addthis_counter addthis_pill_style last" addthis:url="https://es.y8.com/games/death_squad_the_last_mission" addthis:title="Juega a Death Squad: The Last Mission"></a>
+
+<div class="social-widget">
+  <div class="social-widget-partial" data-target-class="add-this-widget" data-html-tag="script" data-src="https://s7.addthis.com/js/300/addthis_widget.js#domready=1&pubid=addy8"></div>
+</div>
+
+<!-- AddThis Button END -->
+
+</div>
+
+<a href="https://es.y8.com/contact/new?subject=Game+problem+report%3A+death_squad_the_last_mission">
+  <div class="game-button-icon report-bug-icon"></div>
+  <span>
+    Report a bug
+  </span>
+</a>
+                
+              </div>
+            </div>
+        </div>
+        <div class="right-part">
+          <div class="vote">
+            <div class="display-with-voting-captcha">
+  <div id="voting-captcha-container" class="voting-captcha-container">
+  <p class="voting-captcha-caption">
+    Validación humana
+  </p>
+
+  <div id="voting-captcha" class="voting-captcha">
+    <div id="inline-badge"></div>
+  </div>
+</div>
+
+</div>
+
+<div>
+  <div class="row voting-container">
+  <div class="message" id="success-overlay">
+    <div class="wrap">
+      <img src="https://img-hws.y8.com/assets/svg/green_checkmark_icon-65aa5fb04b6f6f5d1908451f00e6a8e688a7d402a4ad40855e965d61a6ef534e.svg" alt="Success">
+      <span>
+        Gracias, tu voto ha sido registrado y aparecerá pronto.
+      </span>
+    </div>
+  </div>
+
+  <div id="voting-buttons-container" class="voting-buttons-container">
+    <div class="vote-section top-block">
+      <div class="rating-picture">
+          <img src="https://img-hws.y8.com/assets/svg/vote_rating_low-7f58fd64f3638c3e8f71d34043c26ae53a06b5e9281bd3695fef7667e425ab8c.svg" alt="Low rating">
+      </div>
+
+      <div class="rating">
+        79.92%
+      </div>
+    </div>
+    <div class="vote-question">
+      ¿Te ha gustado este juego?
+    </div>
+
+    <div class="vote-section">
+      <div class="vote-popup"></div>
+      <a href="#"
+         data-item-id="157055"
+         data-success-class="green"
+         id="voting-button-yes"
+         class="btn btn-default">
+        <div class="game-button-icon thumbup-icon"></div>
+        <span>Sí</span>
+      </a>
+      <a href="#"
+         data-item-id="157055"
+         data-success-class="red"
+         id="voting-button-no"
+         class="btn btn-default">
+        <div class="game-button-icon thumbdown-icon"></div>
+        <span>No</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="box ads">
+      <div id="Y8_Right_of_games_1" class="div-gpt-ad-right-up">
+        <script>
+          googletag.cmd.push(function() { googletag.display('Y8_Right_of_games_1'); });
+        </script>
+      </div>
+      <div id="Y8_Right_of_games_2" class="div-gpt-ad-right-down">
+        <script>
+          googletag.cmd.push(function() { googletag.display('Y8_Right_of_games_2'); });
+        </script>
+      </div>
+    </div>
+
+    <div class="game-banners-container box" style="display: none;">
+      <h5 class="uppercase">
+        Games you may like
+      </h5>
+      <div class="banners-wrapper"></div>
+    </div>
+
+      <div class="box walkthrough">
+        <div class="col-md-4">
+          <div class="icon-container">
+            <a href="/animation/death_squad_the_last_mission_walkthrough" target="_blank">
+              <img class="play-button" src="https://img-hws.y8.com/assets/y8/play-button-be43e768664d84e653bc9542c0c6ca6d64c57286c94db120eb1515b6aa7f66ac.png" alt="Play button" />
+              <img class="walkthrough-thumb" alt="Death Squad: The Last Mission Walkthrough" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-video-thumbnails-001/280632/s180x135_video_thumbnail.jpg" width="180" height="135" />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h5 class="title">
+            <a href="/animation/death_squad_the_last_mission_walkthrough" target="_blank">
+              Walktrhough de Death Squad: The Last Mission
+            </a>
+          </h5>
+          <p class="walkthough-text">¿Trabado? Mira como completar el juego.</p>
+        </div>
+      </div>
+
+    <div class="box tags">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="uppercase">
+            Etiquetas
+            <a href="https://es.y8.com/tags">Ver todo</a>
+          </h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 tags-list">
+            <a href="https://es.y8.com/tags/army"><i class="tag-36x28 tag-36x28-games tag-36x28-2"></i><p>Ejército</p></a>
+            <a href="https://es.y8.com/tags/1_player"><i class="tag-36x28 tag-36x28-games tag-36x28-10"></i><p>1 jugador</p></a>
+            <a href="https://es.y8.com/tags/shooting"><i class="tag-36x28 tag-36x28-games tag-36x28-14"></i><p>Disparos</p></a>
+            <a href="https://es.y8.com/tags/war"><i class="tag-36x28 tag-36x28-games tag-36x28-26"></i><p>Guerra</p></a>
+            <a href="https://es.y8.com/tags/street"><i class="tag-36x28 tag-36x28-games tag-36x28-70"></i><p>Callejeros</p></a>
+            <a href="https://es.y8.com/tags/killing"><i class="tag-36x28 tag-36x28-games tag-36x28-102"></i><p>Asesinatos</p></a>
+            <a href="https://es.y8.com/tags/series"><i class="tag-36x28 tag-36x28-games tag-36x28-140"></i><p>Secuelas</p></a>
+            <a href="https://es.y8.com/tags/first_person_shooter"><i class="tag-36x28 tag-36x28-games tag-36x28-182"></i><p>First Person Shooter</p></a>
+            <a href="https://es.y8.com/tags/3d"><i class="tag-36x28 tag-36x28-games tag-36x28-205"></i><p>3D</p></a>
+            <a href="https://es.y8.com/tags/guns"><i class="tag-36x28 tag-36x28-games tag-36x28-230"></i><p>Arma</p></a>
+            <a href="https://es.y8.com/tags/free_game"><i class="tag-36x28 tag-36x28-games tag-36x28-320"></i><p>Gratis</p></a>
+            <a href="https://es.y8.com/tags/unity3d"><i class="tag-36x28 tag-36x28-games tag-36x28-334"></i><p>Unity3D</p></a>
+            <a href="https://es.y8.com/tags/y8_account"><i class="tag-36x28 tag-36x28-games tag-36x28-347"></i><p>Y8 Account</p></a>
+            <a href="https://es.y8.com/tags/webgl"><i class="tag-36x28 tag-36x28-games tag-36x28-380"></i><p>WebGL</p></a>
+            <a href="https://es.y8.com/tags/y8_highscore"><i class="tag-36x28 tag-36x28-games tag-36x28-751"></i><p>Y8 Highscore</p></a>
+            <a href="https://es.y8.com/tags/y8_save"><i class="tag-36x28 tag-36x28-games tag-36x28-755"></i><p>Y8 Save</p></a>
+            <a href="https://es.y8.com/tags/y8_achievements"><i class="tag-36x28 tag-36x28-games tag-36x28-759"></i><p>Y8 Achievements</p></a>
+        </div>
+      </div>
+    </div>
+
+      <div class="box idnet-leaderboard">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="uppercase">
+              Tabla de líderes
+              <div class="powered-by">
+                Potenciado por
+                <span class="y8-account-name"><a target="_blank" href="https://account.y8.com">Y8 Account</a></span>
+              </div>
+            </h5>
+          </div>
+        </div>
+
+        <div class="row leaderboard-list">
+          <div class="col-md-12">
+            <div id='idnet-leaderboard' data-load-avatars="true" data-visible-pages="3" data-per-page="5" data-default-avatar="https://img-hws.y8.com/assets/y8/default_avatar-b95766a9a753f0006659f8cc583a705d09e260787fccdc47bfdabca911b80666.png">
+              <script id="leaderboard-template" type="text/x-handlebars-template">
+  <a class="member" href="/users/{{playerid}}/{{playername}}" target="_blank" data-playerid="{{playerid}}">
+    <div class="number">{{rank}}</div>
+    <img class="avatar" src="{{imageurl}}" />
+    <div class="text">
+      <span class="name">{{playername}}</span>
+      <br />
+      <span class="points"><b>{{points}}</b> points</span>
+    </div>
+  </a>
+</script>
+
+            </div>
+            <div class='modal idnet-leaderboard-popup' style="display:none;">
+  <div class="box idnet-leaderboard-popup-inner">
+    <h5>Puntuaciones Altas</h5>
+    <div class="leaderboard-powered y8-account-name">
+      <a target="_blank" href="https://account.y8.com">Y8 Account</a>
+    </div>
+    <div class="close close-leaderboard">
+      <img alt="Cerrar Tabla de Puntuaciones" src="https://img-hws.y8.com/assets/close-popup-66b45f3f2c728316c3b2da2cd9d53ede4e6856de6b4b5f20d0bb5e84d8206c43.png" />
+    </div>
+    <div class="leaderboard-filter-box" align="center"><select name="filter" id="filter"><option value="alltime">De todos los tiempos</option>
+<option value="last30days">Últimos 30 días</option>
+<option value="last7days">Últimos 7 días</option>
+<option value="today">Hoy</option>
+<option value="newest">Más nuevo</option></select></div>
+    <div class="idnet-leaderboard-body"></div>
+    <div id="idnet-leaderboard-pagination" class="idnet-leaderboard-pagination idnet-pagination idnet-light-theme"></div>
+  </div>
+</div>
+
+          </div>
+        </div>
+
+        <div class="show-button more">
+          <a href="#" class="idnet-leaderboard-popup-toggle">
+            Ver más
+            <i class="icon-angle-down"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="box with-icon">
+        <i class="cup">
+          <img src="https://img-hws.y8.com/assets/svg/y8_highscores_icon-61f8beb052f40a6ac85fe6c517984cdba7ede1c0404452281627f08f27d44dda.svg" alt="High scores">
+        </i>
+
+        <h5>
+          <a href="https://es.y8.com/tags/y8_highscore">Todos los juegos de Y8 con puntuaciones altas</a>
+        </h5>
+      </div>
+
+      <div class="box achievements">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="uppercase">Logros</h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="white-box-bg idnet-achievements">
+  <h2>
+    Death Squad: The Last Mission &ndash;
+    <span>
+      achievements (
+      <span class="y8-account-name"><a target="_blank" href="https://account.y8.com">Y8 Account</a></span>
+      powered)
+    </span> &ndash;
+    <a target="_blank" href="/tags/y8_achievements">Ver todos los juegos Y8 con logros</a>
+    <img align="top" class="achievements-loader" src="https://img-hws.y8.com/assets/spinner-4cc593e7307fd42aa01728c2977acee6e37704df544cccdf5e3318c0a957122e.gif" alt="Spinner" />
+  </h2>
+
+  <div id="achitem-popup" class="achitem-popup" style="display:none;">
+  <div id="achitem-difficulty" class="achitem-difficulty"></div>
+  <div id="achitem-title" class="achitem-title"></div>
+  <div id="achitem-desc" class="achitem-desc"></div>
+  <div id="achitem-awarded" class="achitem-awarded"></div>
+</div>
+
+<div id='idnet-achievements' class="achievements-groupe">
+  <script id="achievements-template" type="text/x-handlebars-template">
+  <div class="achitem" data-achtitle="{{achievement}}" data-achdesc="{{description}}" data-achdifficulty="{{difficulty}}" data-achawarded="{{awarded}}">
+    <img src="https://cdn.y8.com/achievements/5b29372bd5593048e7b17892/{{icon}}?host=static2.y8.com" {{#unless player}}class="disabled"{{/unless}}>
+  </div>
+</script>
+
+  <div class="clear"></div>
+</div>
+
+<div id="idnet-achievements-pagination" class="idnet-achievements-pagination idnet-pagination idnet-light-theme"></div>
+
+<div class="clear"></div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+
+    <div class="box with-icon embed">
+      <i class="puzzle">
+        <img src="https://img-hws.y8.com/assets/svg/add_embed_icon-b314d8fd539d0cefbb66740836a940d97e5aefd3df05b61b82a0394453f97125.svg" alt="Embed">
+      </i>
+
+      <h5>
+        ¡Añadir este juego a tu página web!
+        <br />
+        <a class="sub-link item-embed-toggle" data-item-id="157055" href="#">Abrir menú integrado</a>
+      </h5>
+
+      <div class="modal item-embed-popup" style="display:none;" id="item-embed-popup-157055">
+          <div class="box embed">
+  <h5>¡Añadir este juego a tu página web!</h5>
+  <div class="embed-pic">
+    <a target="_blank" rel="noreferrer" href="https://www.y8.com/games/death_squad_the_last_mission"><img alt="Death Squad: The Last Mission" class="playable" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/113906/small.gif" /><div class='name'>Death Squad: The Last Mission</div><div class='link'>¡Juega ya!</div></a>
+  </div>
+
+    <div class="textarea-title iframe-embed">iFrame Embed</div>
+    <textarea id="embed-text"><iframe src="https://y8.com/embed/death_squad_the_last_mission" scrolling="no" style="width: 864px; height: 580px; border: 0; margin: 0; padding: 0;"> </iframe></textarea>
+
+  <a href="#" class="btn btn-grey btn-close">Cerrar</a>
+  <span class="copy-msg"></span>
+</div>
+
+      </div>
+    </div>
+
+      <div class="box game-series" >
+        <div class="game-series-list">
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="uppercase">
+                <a id="series" name="series"></a>
+                PARTE DE UNA SERIE:
+                Death Squad
+              </h5>
+            </div>
+          </div>
+
+          <div class="row items-grid">
+            
+<div id="item_170636" class="item thumb videobox" data-item-id="170636" data-label-ids="Y8 Account,Y8 Achievements,Y8 Highscore,1 Player,3D,Army Games,First Person Shooter,Gun Games,Killing Games,Shooting,Unity3D,War,WebGL,Defend,Timing Game" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/fd9e9ddfce9f2b1943d3741440b7e7c95dce58e1.mp4?1568185310" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/4abbae20941817f19e765f718b5a64f84cef04f2.ogv?1568185310" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/5f2086dee28bc90e27bfa2c96de9a579ef0cee79.webm?1568185310" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/1f883847106997802adbc3b7b654039de2dc863b.gif?1568185310&quoquot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/13517fed744a1c417c2ed626ada7c6b0ec624f2a.gif?1568185310&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/66bf26d1dee94fe79b93472d77bcb336d2353eb9.gif?1568185310&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/134706/d8bccfc33d78397d7bb2b674f075d3f7eb3b43d2.gif?1568185310&quot;]">
+  <a href="https://es.y8.com/games/death_squad_2">
+    <div class="thumb-img-container">
+      <img class="thumb serie-item-thumb playable" alt="Death Squad 2" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/124639/small.gif" />
+    </div>
+
+    <div class="serie-item-info">
+      <p class="title ltr">Death Squad 2</p>
+
+      <p class="rating">
+        <span class="number">
+          78%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          87,026 reproducciones
+      </p>
+    </div>
+</a></div>
+          </div>
+        </div>
+
+        <div class="show-button more" style="display: none;">
+  <a href="#series">
+    Mostrar más
+    <i class="icon-angle-down"></i>
+  </a>
+</div>
+
+<div class="show-button less" style="display: none;">
+  <a href="#series">
+    Mostrar menos
+    <i class="icon-angle-up"></i>
+  </a>
+</div>
+
+      </div>
+
+    <div id="notification-manager" class="notification-manager">
+  <div class="icon">
+    <img src="https://img-hws.y8.com/assets/svg/forum_promo_icon-d467f40ea97b7a9f17c869bcbed30d00ccff4e44b7b0f2d2b2ea269c021796cd.svg" alt="Forum Promo">
+  </div>
+
+  <div class="text">
+    <div class="title">
+      ¡Hola! ¿Sabías que tenemos un Foro Y8?
+    </div>
+
+    <div class="hint">
+      Súmate a otros jugadores hablando sobre juegos.<a href="https://forum.y8.com"> Visita Foro Y8</a>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a class="btn-sm btn btn-white" href="https://forum.y8.com">Ir al Foro</a>
+    <a class="hide-notification btn-sm btn btn-wire-white" href="">Ocultar</a>
+  </div>
+</div>
+
+    <div class="box ads left-banner-bottom-right-failover">
+      <div class="row">
+      </div>
+    </div>
+  </div>
+
+  <div class="left">
+    <div class="box game-description">
+      <div class="row title-container">
+        <div class="col-md-12">
+          <h5 class="uppercase">
+            Descripción del juego:
+          </h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ltr description">
+            <p>Death Squad: The Last Mission is a first-person 3D shooting WebGL game that will challenge your shooting and survival skills to the test! In this game, your chopper has crashed down to an abandoned area which is near at the enemy base. Your team has survived the crash but will all of you survive the attack of your rival soldiers. Together with your team, you need to hold your position as long as you can. With limited supply of ammunitions, you need to get though every wave of attack. There will be a 20 second warm up time before every wave. Use that time to loot for weapons, ammunitions and med kits that will spawn around the area. Your enemy will increase every wave, so you need to gather more ammunition and med kits as you can for it will help you survive. There are 12 achievements that you can unlock from easy, medium and hard. Get points by killing your opponents and earn as much as you can so you can be listed together with the pros of this game in the leaderboard. Take part on this mission and be one of the unstoppable Death Squad!</p>
+
+          </div>
+          <div class="game-info">
+            <div class="item">
+              <span class="name">
+                Added on
+              </span>
+              <span class="data">
+                02 Aug 2018
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="box screenshots">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="uppercase">
+              Capturas de pantalla del jugador
+              <img align="top" class="screenshots-loader" src="https://img-hws.y8.com/assets/spinner-4cc593e7307fd42aa01728c2977acee6e37704df544cccdf5e3318c0a957122e.gif" alt="Spinner" />
+            </h5>
+          </div>
+        </div>
+
+        <div class="idnet-screenshots" data-idnet-screenshots-url="https://account.y8.com/api/v1/json/clients/5b29372bd5593048e7b17892/screenshots">
+  <script id='screenshot-template' type='text/x-handlebars-template'>
+  <div class='screenshot-block'>
+    <div class="screenshot-wrapper">
+      <img
+        class="screenshot-thumb"
+        data-url='{{ url }}'
+        data-src="{{ thumbUrl }}"
+        data-srcset="{{ thumbUrl }}"
+        data-screenshot='{{ contextAsJson }}'
+      />
+    </div>
+    <div class="screenshot-info">
+      <div class="screenshot-owner">
+        From:
+        <a class="owner" target="_blank" href="/users/{{ ownerPid }}/{{ ownerNickname }}">
+          {{ ownerNickname }}
+</a>      </div>
+      <div>
+        Rating:
+        <div class='rateyo-block'>
+          <div id='rateyo-{{ id }}'></div>
+        </div>
+        {{ averageRating }}
+      </div>
+    </div>
+  </div>
+</script>
+
+</div>
+
+<div class="keycaptcha-placeholder">
+  <div class="keycaptcha-wrapper">
+    <div class="screenshot-rating-container">
+      <div id="screenshot-rating-result-messages" class="screenshot-rating-result-messages">
+        <div class="message message-success" id="screenshot-rating-message-success">
+          <span>
+            Gracias, tu voto ha sido registrado y aparecerá pronto.
+          </span>
+        </div>
+        <div class="message message-error" id="screenshot-rating-message-unknown-error">
+          <span>
+            Perdón, ha habido un error inesperado. Por favor vuelve a votar más tarde.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="display-with-screenshot-rating-captcha">
+      <div class="show-block">
+        <div id="screenshot-rating-captcha-container" class="screenshot-rating-captcha-container">
+          <form action="#" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CTuUG9UwcFXqcH0HOWhJR2Kr/48IRkzxNg9/ovLJIkchrwHGcUhNl9eXHsl7uqPAj/t2Xd9dAgbVWiNv8fgwFA==" />
+            <p class="screenshot-rating-captcha-caption">
+              No estás conectado. Sólo los usuarios registrados pueden votar sin verificación. <br>Por favor <a class="idnet-fast-register-link" href="javascript:;">Accede o Regístrate</a>, o completa la verificación.
+            </p>
+
+            <div id="inline-badge2"></div>
+
+            <div id="screenshot-rating-captcha-buttons" class="screenshot-rating-captcha-buttons">
+              <input type="submit" name="commit" value="Confirmar" id="submit-rate" />
+              <a id="screenshot-rating-captcha-button-cancel" href="#">cancelar</a>
+            </div>
+</form>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="enlarged-screenshot-container">
+  <div class="screenshot-table">
+    <div class="screenshot-row">
+      <div class="screenshot-cell screenshot-image">
+        <a class='enlarged-screenshot-close'><i class='icon-cancel'></i></a>
+        <img class="enlarged-screenshot" alt="Screenshot" />
+      </div>
+    </div>
+    <div class="screenshot-row">
+      <div class="screenshot-cell screenshot-info">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id='enlarged-screenshot-template' type='text/x-handlebars-template'>
+  <div class="enlarged-screenshot-info">
+    Game screenshot from
+    <a class="owner" target="_blank" href="/users/{{ ownerId }}/{{ ownerNickname }}">
+      {{ ownerNickname }}
+</a>    -
+    Rating:
+    <div class='rateyo-block'>
+      <div id='enlarged-rateyo-{{ id }}'></div>
+    </div>
+    {{ averageRating }}
+  </div>
+
+  <div class="enlarged-keycaptcha-placeholder"></div>
+</script>
+
+      </div>
+
+    <div class="box comments">
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="uppercase">
+            Comentarios
+            <span class="number-with-dot comments-counter counter"></span>
+            <img align="top" class="comments-loader" src="https://img-hws.y8.com/assets/spinner-4cc593e7307fd42aa01728c2977acee6e37704df544cccdf5e3318c0a957122e.gif" alt="Spinner" />
+          </h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div id="post-comment-container-top" class="post-comment-container">
+  <form class="idnet-comments-form" action="/ajax/activities" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+  <div class="disabled-comment-cell  login-to-comment">
+    <div class="post-comment-cell">
+      <p class="text-center"><strong>
+      	Por favor regístrate o identifícate para publicar un comentario
+      </strong></p>
+      <div class="text-center">
+      	<button class="btn btn-lg red idnet-fast-register-link">Register</button>
+      	<button class="btn btn-lg idnet-fast-login-link">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-comment-table" style="display: none;">
+    <div class="post-comment-cell">
+      <input type="text" name="message" id="idnet-comment-text" placeholder="Por favor regístrate o identifícate para publicar un comentario" class="col-md-11 idnet-comment-text" />
+    </div>
+
+    <div class="post-comment-cell-btn">
+      <input type="submit" name="commit" value="Publicar" id="submit-comment" class="col-md-1 comment-button" />
+    </div>
+  </div>
+
+  <input type="hidden" name="item_id" id="item_id" value="157055" />
+</form>
+<div id="post-comment-message-success" class="post-comment-message-success message message-success hidden very-hidden"><span></span></div>
+
+<div id="post-comment-message-error" class="post-comment-message-error message message-error hidden very-hidden"><span></span></div>
+
+<div class="clear"></div>
+
+</div>
+
+<div
+  id='idnet-comments'
+  class='idnet-comments'
+  data-idnet-comments-url="https://account.y8.com/api/v1/json/activities?app_id=4fbb62b133968d57c10041b0&amp;app_namespace=157055"
+  data-idnet-user-comments-url="https://account.y8.com/api/v1/json/profiles/:id/comments?app_namespace=157055">
+  <script id="comment-template" type="text/x-handlebars-template">
+  <div class="idnet-activity idnet-light-theme">
+    <div class="comment-user-content {{^avatars.thumb_url}}comment-w-blank-pic{{/avatars.thumb_url}}">
+      {{#if avatars.thumb_url}}
+        <a class="comment-user-picture" target="_blank" href="/users/{{author_pid}}/{{nickname}}">
+          {{#avatars.thumb_url}}
+            <img src="{{this}}" />
+          {{/avatars.thumb_url}}
+          {{^avatars.thumb_url}}
+            <img src="https://img-hws.y8.com/assets/avatar-small-60840c5dd68a6f1e4ac23adb4a4f055b9b0220d1a7f02820336124a90bd9c196.png" alt="Avatar small" />
+          {{/avatars.thumb_url}}
+</a>      {{/if}}
+      <div class="comment-header{{#unless avatars.thumb_url}} comment-no-avatar{{/unless}}">
+        <p><a href="/users/{{author_pid}}/{{nickname}}" target="_blank" class="author">{{nickname}}</a>&nbsp;<small><span class="timeago">{{created_at}}</span></small></p>
+        <p>{{message}}</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</script>
+
+  <div class="clear"></div>
+</div>
+
+<div id="idnet-comments-pagination" class="idnet-comments-pagination idnet-light-theme" style='display: none;'></div>
+
+<div class="modal choose-avatar-popup" >
+  <div class="box choose-avatar">
+    <div>
+      <div class="no-avatar"></div>
+    </div>
+    <h5>Tu cuenta no posee avatar</h5>
+    <div class="description">
+      Para continuar con la publicación del comentario, por favor selecciona un avatar temporal:
+    </div>
+    <div class="avatars">
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-1" data-id="1">
+              <img class="avatar-preset" id="avatar1" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/1-48x48-961032f7c60d7919cfbf685733f0d66a75c14950500ebb3e8387ef9fdaadd118.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-1" data-id="2">
+              <img class="avatar-preset" id="avatar2" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/1-48x48-70a7ee9c47efc697655cb1d0016d9b6dc1c1c6eb41ab641374e0ac61c48a79d4.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-1" data-id="3">
+              <img class="avatar-preset" id="avatar3" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/1-48x48-55bb7039b2a27ec21e541488a8c3cd25bbc5b1eef6897a22439976f3efcdb44e.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-1" data-id="4">
+              <img class="avatar-preset" id="avatar4" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/1-48x48-ce172cb4b60aa4bb806c461adb64869e2af032b1950da87ba1ad6f79d8a37971.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-1" data-id="5">
+              <img class="avatar-preset" id="avatar5" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/1-48x48-549ea1cf1ec680c6ee028445e6ccf313042256489a0ad07d20b31e4a81a07f81.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-2" data-id="12">
+              <img class="avatar-preset" id="avatar12" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/2-48x48-af552f079f04b7ac0e7a502388bfd3a0dbcd8cb25427cef00dd2c472342536d6.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-2" data-id="22">
+              <img class="avatar-preset" id="avatar22" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/2-48x48-ee21dfc4c14ad9ea6f6e2e163b402a56185c7ddd9238c6fa64368940e4ddc4f2.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-2" data-id="32">
+              <img class="avatar-preset" id="avatar32" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/2-48x48-fc755a50fa958b9913692dbee881243ba1db8de3ae0ffd0a1e7515ecb293d451.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-2" data-id="42">
+              <img class="avatar-preset" id="avatar42" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/2-48x48-5ccacadda5041175450fb27b955b2802e7a19f1cbb91f4ec7755cccffb4655c1.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-2" data-id="52">
+              <img class="avatar-preset" id="avatar52" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/2-48x48-982d264737010b3886ed9c7ea10445f66fa7eaa685d4870bb507ec232e558a99.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-3" data-id="13">
+              <img class="avatar-preset" id="avatar13" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/3-48x48-95041ed8010f94de1d22f900e65879dd825947c307a774ee21482a2c01f0192a.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-3" data-id="23">
+              <img class="avatar-preset" id="avatar23" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/3-48x48-e993b8e6caba6ba14befc2bce628ea34370cfa5ef2c362f920741efb147b90e0.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-3" data-id="33">
+              <img class="avatar-preset" id="avatar33" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/3-48x48-8cfb329627cacf8fce5145d7f3a39ecab98e97b5ce4b96d09be73a1536a6f880.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-3" data-id="43">
+              <img class="avatar-preset" id="avatar43" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/3-48x48-adc197c12f6c6cde2879a260d9190ed81d32c3dacf11c8911b352fdda00bee74.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-3" data-id="53">
+              <img class="avatar-preset" id="avatar53" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/3-48x48-e878069033676e099e344b01b773da7e5470c37b88649b2da0734376da01cd08.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-4" data-id="14">
+              <img class="avatar-preset" id="avatar14" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/4-48x48-aa0da43be0f975195c3e47ea1d23942c797e2bdd3b89200f3113d5c99d0bbaa6.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-4" data-id="24">
+              <img class="avatar-preset" id="avatar24" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/4-48x48-891f80318f3df1a2c08aeec23554c1c99bd82419f169453eae83a9ea542f253a.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-4" data-id="34">
+              <img class="avatar-preset" id="avatar34" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/4-48x48-3d35978d703c650f14fbe83540f604cda85ce15eb091a64d7657f71eb7e3ab12.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-4" data-id="44">
+              <img class="avatar-preset" id="avatar44" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/4-48x48-f02e857eb20ff85ecac454c457f6e16aac13466fcb66b4e09e10500fb1d526e6.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-4" data-id="54">
+              <img class="avatar-preset" id="avatar54" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/4-48x48-23987467c16f32863b5a9754d47177adc57e907ef37a2feeff5b48c62800df83.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-5" data-id="15">
+              <img class="avatar-preset" id="avatar15" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/5-48x48-90721c54fc63a9bcfd39f65f7f76ddb9b376dfd348628e702ae2dee85b8db4eb.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-5" data-id="25">
+              <img class="avatar-preset" id="avatar25" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/5-48x48-081868f770e55b26e6c7c7765399eb20deb538ef3fd8ded1c82e23874c709c09.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-5" data-id="35">
+              <img class="avatar-preset" id="avatar35" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/5-48x48-a2de89935d6e8d42a2ee46b3b7a0e050b9f513bd09105f7d0aad37bf758b2c36.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-5" data-id="45">
+              <img class="avatar-preset" id="avatar45" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/5-48x48-4b1ac3066839ffffc042a2f1d31db785b3828091c60fad525fa5a9c05cb4909e.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-5" data-id="55">
+              <img class="avatar-preset" id="avatar55" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/5-48x48-4ef15b4d424c2436bff2e9d4dad2ecf718137300beb1c29f7d9486d669398d5f.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-6" data-id="16">
+              <img class="avatar-preset" id="avatar16" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/6-48x48-1ddee0ff80cccad60c2f1b84b4323e16396965709240be37b3e867a8d070d6bc.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-6" data-id="26">
+              <img class="avatar-preset" id="avatar26" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/6-48x48-f119490025283f227d7156ffbaeee2b89275d6e7e09820f699645ec4e91454db.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-6" data-id="36">
+              <img class="avatar-preset" id="avatar36" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/6-48x48-4f982356faeef0a00312f786cb6a012a46fb976c372944e31eedb189c0435bcd.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-6" data-id="46">
+              <img class="avatar-preset" id="avatar46" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/6-48x48-46ef371975683c4190b5bfb18cd4ed7dba5a8fb7d5a58b7c73c6185466789c6d.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-6" data-id="56">
+              <img class="avatar-preset" id="avatar56" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/6-48x48-70fba490895af6bd47f27a47a1cfeb4ba4b636cf16b06a1825464d1f7b654250.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-7" data-id="17">
+              <img class="avatar-preset" id="avatar17" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/7-48x48-734be280348d3517935ea9cfe38160e827252661720116134c559e99842bc8dc.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-7" data-id="27">
+              <img class="avatar-preset" id="avatar27" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/7-48x48-bcdf5ca35f1c3e66928dbb97c5eb8b7a04add51f0f3c9c24db84d0732fafab55.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-7" data-id="37">
+              <img class="avatar-preset" id="avatar37" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/7-48x48-1e4cf9cd05c3c6c491721c5766ec76502e6b17d120bcedb379949b5a50b5d6a8.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-7" data-id="47">
+              <img class="avatar-preset" id="avatar47" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/7-48x48-53ff8ea869f63f4b31e801edc526bd77a102dc6d5f20919d0fe27fa9e2eb222f.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-7" data-id="57">
+              <img class="avatar-preset" id="avatar57" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/7-48x48-ba43b6fe83f8cc0a25257d9b5e347a6e9d560b404e1687dd21ef1b2bd06147ea.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-8" data-id="18">
+              <img class="avatar-preset" id="avatar18" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/8-48x48-6413c5d0b97ac931536fa5bca173df8488c0bed8ea582ddb7fbc8d1bd33445ac.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-8" data-id="28">
+              <img class="avatar-preset" id="avatar28" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/8-48x48-6aadd517fb69cbaed2d22fde877d639424ae0040d670bd0fb5e13aad689cbbc8.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-8" data-id="38">
+              <img class="avatar-preset" id="avatar38" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/8-48x48-de1b8770023c105e14f2ee65d5175fdb522acd9d43993152b19062deb25ca19a.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-8" data-id="48">
+              <img class="avatar-preset" id="avatar48" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/8-48x48-0f29e0d4468c66499da59863cf4e02fd5dc9a30ca1e9ae581727516b91c0c797.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-8" data-id="58">
+              <img class="avatar-preset" id="avatar58" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/8-48x48-728e44388ff56a27b4e1593a984177afb3eec213abe8fa3ae0fb6cea52779015.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-9" data-id="19">
+              <img class="avatar-preset" id="avatar19" alt="male" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/male/9-48x48-ed5a4534b0bd61eef5fad81804ea4ca712dc58d43f8c1db462a701a2aee1522a.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-9" data-id="29">
+              <img class="avatar-preset" id="avatar29" alt="female" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/female/9-48x48-9f872fca03c9f38eabe85358acae758d6b38bf15acc6b5e7f84a004520939b41.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-9" data-id="39">
+              <img class="avatar-preset" id="avatar39" alt="animal" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/animal/9-48x48-cce58a79ad394043df52aca392f251e01ccfaa86dd9d7e5d83c3eb395108941c.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-9" data-id="49">
+              <img class="avatar-preset" id="avatar49" alt="monster-1" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-1/9-48x48-5533604a8d198505f6de8f656e9bad90848d25e1025d29f165a12699847654e3.png" />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="avatar-preset-wrapper set-9" data-id="59">
+              <img class="avatar-preset" id="avatar59" alt="monster-2" width="48" height="48" src="https://img-hws.y8.com/assets/avatars/monster-2/9-48x48-c8a8becf2dbfcf2df6321b5a59cdb7db14df1bcc819cc9d8fd5de6908e0ceefe.png" />
+            </div>
+          </div>
+      <div class="cell">
+        <video width="48" height="48" class="btn-animation" autoplay="autoplay" loop="loop" src="https://img-hws.y8.com/assets/avatars/refresh-e75d49906a27c69f182399f7608310698d9205b1b57e4521cf5f135a140b150c.mp4"></video>
+        <div class="btn-refresh"></div>
+      </div>
+    </div>
+
+    <div class="confirmation">
+      <a href="#" class="btn btn-red btn-confirm disabled">Confirm</a>
+      <div class="error">
+        Algo ha ido mal, por favor vuelve a intentarlo.
+      </div>
+    </div>
+
+    <div class="or">
+      <h5 class="line"><span>Or</span></h5>
+    </div>
+
+    <a href="#" class="btn btn-red btn-upload">
+      Subir a la Cuenta Y8
+    </a>
+    <a href="#" class="btn btn-grey btn-close">
+      Cancelar
+    </a>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+
+      <div class="box items-grid related-items">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="uppercase">Juegos Relacionados</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row" data-infinite-scrolling="false" data-base-url="/games/death_squad_the_last_mission" id="items_container">
+            
+<div id="item_169530" class="item thumb videobox" data-item-id="169530" data-label-ids="Action,Army Games,Blood,First Person Shooter,Gun Games,Killing Games,Mouse Skill,Multiplayer,Unity3D,Violence,WebGL,3D,GameDistribution.com,Shooting" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/56fd3ab5e7475ad1832f607d280a1189bc64d440.mp4?1565063975" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/9ee91a0f6baccf7ff932548be4af2a7225316371.ogv?1565063975" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/ebda90f25c1cec135a6fb82a30deefb1fefe3fc2.webm?1565063975" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/018c45563d6b9a2ddd40233071365f529b0fbc1c.gif?1565063975&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/c05eea4a07019674940af99da7d48d0bc5b9d32c.gif?1565063975&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/fffccc54a066ab22393428409068395cb7542d5c.gif?1565063975&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133586/69cd0a45a3c3db694cc158da07dae679f8e9f37c.gif?1565063975&quot;]">
+  <input type="hidden" name="for-girls-169530" id="for-girls-169530" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/bullet_party_2">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Bullet Party 2" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/123616/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/bullet_party_2">
+    <div class="infos">
+      <p class="title ltr">Bullet Party 2</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          76%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,599,621 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_109652" class="item thumb videobox" data-item-id="109652" data-label-ids="Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Multiplayer,Shooting,War,3D,First Person Shooter,Gun Games,WebGL,Internal Games,Not on Kong,Unity3D" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/78738/159297bc1db8bfa2a6ae2a3daf1f19c0a016523b.mp4?1464511389" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/78738/c3073b9f2d53a043321cbd68662d1802028a354b.ogv?1464511389" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/78738/bdead9afa68485c2d6cec577f792441085c7e11d.webm?1464511389" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/78738/551c853b223b7c390b1e863b511213645b184ece.gif?1464511389&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/78738/1b4cf0919ffc268bb653e682c974c45035c2f29a.gif?1464511389&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/78738/2008a2e1324eea64df804f536f9316902d65ffd5.gif?1464511389&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/78738/eaa7b699502e5d0fc665bc75d864bf07f01a5dae.gif?1464511389&quot;]">
+  <input type="hidden" name="for-girls-109652" id="for-girls-109652" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/military_wars_3d_multiplayer">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Military Wars 3D Multiplayer" src="https://img-hws.y8.com/cloud/y8-thumbs/85026/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/military_wars_3d_multiplayer">
+    <div class="infos">
+      <p class="title ltr">Military Wars 3D Multiplayer</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          18,463,420 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_171375" class="item thumb videobox" data-item-id="171375" data-label-ids="1 Player,3D,Action,Blood,First Person Shooter,Gun Games,Killing Games,Purchase Equipment Upgrades,Shooting,Unity3D,Voxel,WebGL,Bomb,GameDistribution.com" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/6ea1dcd88c9db4f3d9ab67d8b48af98a931eefa3.mp4?1570083837" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/7c94eb7baeeb1cec05b090a85f402692661be3cb.ogv?1570083837" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/8f9e051bd71ff9d3e75a638d6a264bc1ec3cf81d.webm?1570083837" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/cf45278f76bde99ee8ddedf46995b2923be4bd95.gif?1570083837&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/a5d386049863765b2e0ec97a8b40f3e75390188a.gif?1570083837&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/a7e720a4f861b552423b5283d31a1a9bf706214d.gif?1570083837&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135285/425db50e06a4402063801f46904005d52c41cae4.gif?1570083837&quot;]">
+  <input type="hidden" name="for-girls-171375" id="for-girls-171375" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/pixel_force">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Pixel Force" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/125226/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/pixel_force">
+    <div class="infos">
+      <p class="title ltr">Pixel Force</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          78%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,995,874 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_171284" class="item thumb videobox" data-item-id="171284" data-label-ids="3D,Action,Adventure,GameDistribution.com,Shooting,Unity3D,WebGL,Gun Games,Pixel Art,Voxel,Y8 Account,Y8 Save" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/16e9d197f7f76c03221177194eb8165f5207314b.mp4?1569843742" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/0bf418048e318d5be1a784b6ea86489ded766750.ogv?1569843742" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/b4b476dafb6aaac7b9b75044f227a3a11f40a821.webm?1569843742" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/fb3d94dee363c03514add503a3a812861d53199f.gif?1569843742&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/2e80c006181859475422fd35e8292a9f37b79b67.gif?1569843742&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/c208ba824cc2d9d471c6057110d06bb1bfbb3ea4.gif?1569843742&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/135216/99dde9a503b81cf8f712264342dfc38a683a05c3.gif?1569843742&quot;]">
+  <input type="hidden" name="for-girls-171284" id="for-girls-171284" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/pubg_pixel">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Pubg Pixel" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/125141/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/pubg_pixel">
+    <div class="infos">
+      <p class="title ltr">Pubg Pixel</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          72%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,087,816 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_174766" class="item thumb videobox" data-item-id="174766" data-label-ids="GameDistribution.com,1 Player,3D,Gun Games,Multiplayer,Shooting,Unity3D,Killing Games,Rocket,Shotgun,Sniper,Timing Game,First Person Shooter" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/b09aa4abc2be8e22bab5a57f56860a9cb091dd1c.mp4?1579082418" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/67e0d6dca6e2e92b27ebf2e0b8cb79323d2c32cf.ogv?1579082418" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/54122bcd634ec00e6e0b1124f29f657d0eb1e267.webm?1579082418" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/de3d08c18371fa19419490e2960135040d34f340.gif?1579082418&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/26d7ff3c48764df276e521a9598ad6d0252b3c38.gif?1579082418&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/c6186e0450bd748a9c043a002964504a5b8fae1b.gif?1579082418&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138393/85e24248a9785fe08c4cf7bf6716afbdf1a1a64f.gif?1579082418&quot;]">
+  <input type="hidden" name="for-girls-174766" id="for-girls-174766" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/cs_online">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Cs Online" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/128333/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/cs_online">
+    <div class="infos">
+      <p class="title ltr">Cs Online</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          767,419 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_155119" class="item thumb videobox" data-item-id="155119" data-label-ids="1 Player,3D,First Person Shooter,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Killing Games,Monsters,Sniper,Unity3D,WebGL,Zombies,Y8 Save" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/16f4577d63cc9f2601b08dc845ecda69247bfe58.mp4?1529511369" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/16d29934528c478d8a774beeeb2058adb6b5edbb.ogv?1529511369" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/c2335bffb5d6a5d2f39a070688d637d49288a4d8.webm?1529511369" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/eae5c97be63f192b009e615900660afbbb28ea29.gif?1529511369&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/6d6ade83acc96235ccd8553618a5d2097c96d90d.gif?1529511369&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/74916cf9422bc083d827dc3f499f71cff7ddc7fd.gif?1529511369&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120854/bf4cfcb0d822641d705061cb6b17c9f3fca8bfa7.gif?1529511369&quot;]">
+  <input type="hidden" name="for-girls-155119" id="for-girls-155119" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/silent_sniper">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Silent Sniper" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/112070/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/silent_sniper">
+    <div class="infos">
+      <p class="title ltr">Silent Sniper</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          71%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,950,747 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_153783" class="item thumb videobox" data-item-id="153783" data-label-ids="1 Player,First Person Shooter,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Multiplayer,Shooting,Gun Games,3D,Action,Blood,Killing Games,online,Purchase Equipment Upgrades,Rocket,Shotgun,Sniper,Unity3D,Army Games,WebGL" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/153f2bc286ed031afcc36591f3b31a8c2b50c74a.mp4?1527264240" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/538de2a733bcc0f309b5d2ea2ae332b0983472ea.ogv?1527264240" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/8a399d7553ab69c6811500510124c51a04e23b4b.webm?1527264240" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/50057744f35d52b3817299eba2ce2cc982cd17f8.gif?1527264240&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/de33dc9a82158c0680a8cb881a78d4393020df0a.gif?1527264240&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/aa90a655cf951348c7cdfe92c17a4353fa0a7509.gif?1527264240&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/119671/322d6bad1c8bbcdbeb5321bce4fc59caa4ff20ae.gif?1527264240&quot;]">
+  <input type="hidden" name="for-girls-153783" id="for-girls-153783" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/masked_forces_unlimited">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Masked Forces Unlimited" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/111441/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/masked_forces_unlimited">
+    <div class="infos">
+      <p class="title ltr">Masked Forces Unlimited</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,698,085 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_157973" class="item thumb videobox" data-item-id="157973" data-label-ids="1 Player,3D,First Person Shooter,Free Game,Gun Games,Killing Games,Shooting,Unity3D,WebGL,Y8 Account,Y8 Achievements,Y8 Highscore,Alien,Spaceship" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/09fd2040ebd73b6dfa5f25252b960f7787e0cb25.mp4?1534946201" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/1e4c0f451a82a66d031f9e6a23563e1d722982e0.ogv?1534946201" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/52f186b545579e54557c695adc1d34b959ea9e65.webm?1534946201" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/b05d5aa6f28f6d0b544545102ff9d5e34302a136.gif?1534946201&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/b77eb0c0d838759eb97d76241c3e34836d517fcf.gif?1534946201&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/707cb6fa606b67bbede824f45adaebbf598fc975.gif?1534946201&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/123326/08da573f8df850b3f2b1d9d4bf38249762445538.gif?1534946201&quot;]">
+  <input type="hidden" name="for-girls-157973" id="for-girls-157973" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/forest_invasion">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Forest Invasion" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/114351/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/forest_invasion">
+    <div class="infos">
+      <p class="title ltr">Forest Invasion</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          78%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,769,923 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_152269" class="item thumb videobox" data-item-id="152269" data-label-ids="1 Player,3D,Blood,First Person Shooter,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Not on Kong,Rescue Game,Shooting,Terrorist,Unity3D,WebGL,Army Games,Killing Games" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/06e347ec28751ee0539cc2b150d5ea565a86a002.mp4?1524054197" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/74433814e72bbd48487cb7913ba4293821ea00fb.ogv?1524054197" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/31947d89eacb37955b93365e53b98fef84848168.webm?1524054197" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/e5ddbceda942974c648976b222d61d5b18c711a5.gif?1524054197&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/2bd4559e31d5cae4615a9321ff9e7a57e22f53a1.gif?1524054197&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/aca537e2e3e58e045caa6ddac3ecc1595bc0bd67.gif?1524054197&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/118117/2dea0bc363591266e84bf6be168b7cc81e785b40.gif?1524054197&quot;]">
+  <input type="hidden" name="for-girls-152269" id="for-girls-152269" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/rescue_six">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Rescue Six" src="https://img-hws.y8.com/cloud/y8-thumbs-small-thumbnails-001/109761/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/rescue_six">
+    <div class="infos">
+      <p class="title ltr">Rescue Six</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          74%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,818,369 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_102085" class="item thumb videobox" data-item-id="102085" data-label-ids="1 Player,3D,First Person Shooter,Gun Games,Purchase Equipment Upgrades,Shooting,Unity3D,Zombies,3D FPS,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Killing Games,WebGL,Not on Kong,Survival Horror" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/71608/ee7be7ed25412d26982f6ffd9ba86c2213a3f00e.mp4?1462340410" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/71608/68863cc2e164a45fa5672b28f1b3af9c2045749f.ogv?1462340410" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/71608/94ae5d3f6bdcb9d2b7aa9e5b97d1b21c63f7c036.webm?1462340410" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/71608/1023a1e417108206de7d320511844730eeb81460.gif?1462340410&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/71608/35cd12af6be574feb376ed451b17cb955450e2c3.gif?1462340410&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/71608/5ce375fd770a363c3557bbac08611ea4607cbf98.gif?1462340410&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/71608/d29344aed1e574f991eac72be9ddc7802cf5d270.gif?1462340410&quot;]">
+  <input type="hidden" name="for-girls-102085" id="for-girls-102085" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/call_of_zombies">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Call of Zombies" src="https://img-hws.y8.com/cloud/y8-thumbs/77750/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/call_of_zombies">
+    <div class="infos">
+      <p class="title ltr">Call of Zombies</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          82%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          6,197,542 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_69820" class="item thumb videobox" data-item-id="69820" data-label-ids="Shooting,Action,Multiplayer,Killing Games,First Person Shooter,3D,Gun Games,Violence" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/513/bb7028827a0656bd703dc8ca461ad10defe64011.mp4?1461296662" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/513/1dda7436d9fb4035b345872db442034ccebef59b.ogv?1461296662" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/513/debc60bf083390eb8cbb78e581f22c4cfe391040.webm?1461296662" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/513/e7ccf9d6def5b29064ca5040044e374196af2312.gif?1461296662&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/513/2f8ba71feb26bc5f0e07c0af752321498556eab7.gif?1461296662&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/513/d54f47eb945e1e28c0c6ffeea62d7294f360a032.gif?1461296662&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/513/f165aa0070c0f4c9164e9e4bc34db0efa405bbb4.gif?1461296662&quot;]">
+  <input type="hidden" name="for-girls-69820" id="for-girls-69820" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/warmerise_lite_version">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Warmerise Lite Version" src="https://img-hws.y8.com/cloud/y8-thumbs/54714/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/warmerise_lite_version">
+    <div class="infos">
+      <p class="title ltr">Warmerise Lite Version</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          90%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          10,277,488 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_82732" class="item thumb videobox" data-item-id="82732" data-label-ids="Y8 Account,Multiplayer,online,Shooting,Space,Y8 Highscore,3D,WebGL,Adrenaline,Gun Games,Fun,Not on Kong,Rocket,Shotgun,Sniper,Third Person Shooter,Sci-Fi" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/105842/ac8fc9125eb76f3f1bca9c95580f73bf731e2217.mp4?1495012057" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/105842/e39488e6d2e239bb574b02b74079749b3d3baddf.ogv?1495012057" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/105842/4ef93e08ed79f9dc4b3eefbfdfa30313b1c01b7d.webm?1495012057" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/105842/c42ca07d37292fcae673ebf4484f51b76a3b476a.gif?1495012057&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/105842/b5f11b297d5f8468b24eda43cee3c7e3085572f3.gif?1495012057&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/105842/783f3bab3426f4c1b2208ef4732c49ec9adb5a88.gif?1495012057&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/105842/0c19237887ad385e67ab7a8b51b010f5a489f71d.gif?1495012057&quot;]">
+  <input type="hidden" name="for-girls-82732" id="for-girls-82732" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/freefall_tournament">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Freefall Tournament" src="https://img-hws.y8.com/cloud/y8-thumbs/63326/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/freefall_tournament">
+    <div class="infos">
+      <p class="title ltr">Freefall Tournament</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          90%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          29,926,032 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_162071" class="item thumb videobox" data-item-id="162071" data-label-ids="1 Player,3D,First Person Shooter,Gun Games,Killing Games,Monsters,Shooting,Unity3D,WebGL,Y8 Account,Y8 Achievements,Y8 Highscore" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/8260d23d87e5d43d325d7f4cb6d2157ad11d8330.mp4?1543582700" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/69a3010f85dbdc67c1d4d76029fc1c41469d7950.ogv?1543582700" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/7cde620668e37d09e6e5d0c540e7e5cb1f55301d.webm?1543582700" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/848c53a2ae889d9b5df105f2f585dc857a642430.gif?1543582700&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/8942b6882f117218675decea65ae3e9dc60911d0.gif?1543582700&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/f7762046b535e6f0da66303da990ce4d356d43e0.gif?1543582700&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/127209/244682ce9a56762fbaa86327534475717e2955a8.gif?1543582700&quot;]">
+  <input type="hidden" name="for-girls-162071" id="for-girls-162071" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/last_hope">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Last Hope" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/117436/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/last_hope">
+    <div class="infos">
+      <p class="title ltr">Last Hope</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          94%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          22,767 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_9435" class="item thumb videobox" data-item-id="9435" data-label-ids="1 Player,Shooting,Action,First Person Shooter,Free Game,Gun Games" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7872/fbd86620ff4a8cddaefb59eba1e3b7798df5d0fe.mp4?1459327876" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7872/18018152cd68021d7a773e9d42d7b695cc71e1d7.ogv?1459327876" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7872/13a4865287def0a8e89cf84580e44bfbca5a7e6a.webm?1459327876" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7872/ee83c17b4485b0abe18f8bd4ec991a5dfabd000b.gif?1459327876&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7872/1661e69ae1c75508b9f0a9114f50fe4337e9841a.gif?1459327876&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7872/40ceb5ee4032566b34f21c6f1e52d6d6e348f9e2.gif?1459327876&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7872/af9919855ff109f69e177f46237c0adaf877c310.gif?1459327876&quot;]">
+  <input type="hidden" name="for-girls-9435" id="for-girls-9435" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/first_person_shooter_in_real_life_4_game">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="First Person Shooter In Real Life 4 Game" src="https://img-hws.y8.com/cloud/y8-thumbs/8580/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/first_person_shooter_in_real_life_4_game">
+    <div class="infos">
+      <p class="title ltr">First Person Shooter In Real Life 4 Game</p>
+
+
+      <div class="technology">
+        <p class="flash">
+          Juego Flash
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,286,487 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_12224" class="item thumb videobox" data-item-id="12224" data-label-ids="1 Player,Action,Blood,Gore,First Person Shooter,Monsters,Shooting,Gun Games,Retro,Shotgun,Adrenaline,Killing Games,Rocket,Newgrounds" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7558/fdee19d849feb13d2c2701222cc4870efce625f7.mp4?1459435945" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7558/cd1b95d6876b84feb7841e316486a6d74b000bb1.ogv?1459435945" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7558/29636bc239d2a79a636b36c4a55fa92ffe5b8c1d.webm?1459435945" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7558/7a874842594527e7b185881811d54b2c03830895.gif?1459435945&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7558/9a444d89393130e480c54d21744ad0ee721e56af.gif?1459435945&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7558/16ed1e57c41efc763d8dc5c00cbfac9cebefe51a.gif?1459435945&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7558/a19d94d6d9ebf363fb9a9c9cac11921484931503.gif?1459435945&quot;]">
+  <input type="hidden" name="for-girls-12224" id="for-girls-12224" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/doom_1">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Doom 1" src="https://img-hws.y8.com/cloud/y8-thumbs/11220/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/doom_1">
+    <div class="infos">
+      <p class="title ltr">Doom 1</p>
+
+
+      <div class="technology">
+        <p class="flash">
+          Juego Flash
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          84%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          993,609 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_173577" class="item thumb videobox" data-item-id="173577" data-label-ids="1 Player,Defend,HTML5,Mouse Skill,Purchase Equipment Upgrades,Touchscreen,Gun Games,Shooting,Army Games,First Person Shooter,Y8 Account,Y8 Save,Y8 Achievements,Android game,iPad,iPhone,Mobile" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/4ed7781c5ee11db4b9c1a2072b6dfd2489e2c17d.mp4?1575883462" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/cdfacd3f1311a7bf86c9037319e37e76d0638add.ogv?1575883462" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/40bb59dc38827927a39666d01e7213c282bd40ea.webm?1575883462" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/359a2655b877affbf897ffe5ead92bdbfb8bdc39.gif?1575883462&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/3ad4a63227f71057761480628ec4553624af65df.gif?1575883462&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/4fe4351eb3abb0630d9ad30c47245cb661bf7bb9.gif?1575883462&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137254/21c3b19085b4c39337f5e35ff8038cc71a2ae9e3.gif?1575883462&quot;]">
+  <input type="hidden" name="for-girls-173577" id="for-girls-173577" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/rombo_special_task_force">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Rombo Special Task Force" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/127183/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/rombo_special_task_force">
+    <div class="infos">
+      <p class="title ltr">Rombo Special Task Force</p>
+
+
+      <div class="technology">
+        <p class="html5">
+          HTML5
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          35,032 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_9433" class="item thumb videobox" data-item-id="9433" data-label-ids="1 Player,Shooting,Action,First Person Shooter,Free Game,Gun Games" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/9628/3b2e90625933fe662cc1e6ee379669a24a7feec6.mp4?1459327598" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/9628/804b77e06052ed6bd905f26ff798ecca7b258326.ogv?1459327598" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/9628/bfcef3bec650c3493a47f842740a8566cedfc2e1.webm?1459327598" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/9628/fb48da4bf2f750d4d09cc6c335ee1aecc1f85682.gif?1459327598&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/9628/cd86b44ec43633333330f8f267a1bbff0908b304.gif?1459327598&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/9628/ced7c72c772cf2ae515b0064cb9b8e8e94e15e74.gif?1459327598&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/9628/0ff12c56d93f50592a24c4290ced4b56c5b3b0b0.gif?1459327598&quot;]">
+  <input type="hidden" name="for-girls-9433" id="for-girls-9433" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/first_person_shooter_in_real_life_3_game">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="First Person Shooter In Real Life 3" src="https://img-hws.y8.com/cloud/y8-thumbs/8578/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/first_person_shooter_in_real_life_3_game">
+    <div class="infos">
+      <p class="title ltr">First Person Shooter In Real Life 3</p>
+
+
+      <div class="technology">
+        <p class="flash">
+          Juego Flash
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          76%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          6,192,983 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_73127" class="item thumb videobox" data-item-id="73127" data-label-ids="Helicopter,Shooting,First Person Shooter,Flying,Army Games,1 Player,Unity3D,3D" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7570/0d5c9180c88ff5d8e482858dcf0edc55844c2595.mp4?1461390911" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7570/c1c37751633a761cda966ac8d5499c7bc0362b33.ogv?1461390911" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/7570/06823712fa34e04805110e5856b9b39283f97a0f.webm?1461390911" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7570/08233892b8a38238fefc4d2864a65153f8271443.gif?1461390911&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7570/dd32ad5116f4e1eb43fe424b90a4b4625d985238.gif?1461390911&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7570/82b143ec41654034d46cab151955830f17a31598.gif?1461390911&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/7570/2cb37b3191c22522f54704dcc6bd1e7eb7d3a700.gif?1461390911&quot;]">
+  <input type="hidden" name="for-girls-73127" id="for-girls-73127" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/killstorm_demo">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Killstorm Demo" src="https://img-hws.y8.com/cloud/y8-thumbs/56915/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/killstorm_demo">
+    <div class="infos">
+      <p class="title ltr">Killstorm Demo</p>
+
+
+      <div class="technology">
+        <p class="unity_player">
+          Juego Unity 3D
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          89%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          40,592 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_155074" class="item thumb videobox" data-item-id="155074" data-label-ids="1 Player,3D,Blood,First Person Shooter,Free Game,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Killing Games,Monsters,Shooting,Unity3D,WebGL,Survival Horror" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/c17d70f3ef21e56ad38f6ac19591f996e1891119.mp4?1529503950" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/1c66aacbc174739aea607e693ea4aa2e6c064825.ogv?1529503950" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/32a7e538c811e92d4db99f8094e11f476836eba2.webm?1529503950" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/804aa57797467cc3e39bded303d166cee5b13079.gif?1529503950&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/9f39d65896dd04ab07db9b0b6ff789a3ff55dcc8.gif?1529503950&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/37507fe41a7007ad7abb642a040183d71bad68a1.gif?1529503950&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/120853/9f1819f298f732fd1e51b3ef621336691a6abfbc.gif?1529503950&quot;]">
+  <input type="hidden" name="for-girls-155074" id="for-girls-155074" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/bunker_of_monsters">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Bunker of Monsters" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/112069/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/bunker_of_monsters">
+    <div class="infos">
+      <p class="title ltr">Bunker of Monsters</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          72%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          22,598 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_136534" class="item thumb videobox" data-item-id="136534" data-label-ids="1 Player,3D,Army Games,Download game,First Person Shooter,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Island,Shooting,Unity3D,War,WebGL,Not on Kong" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/104012/393cbf7894be0f431d1d1de2ba0dc9ed93740230.mp4?1490000593" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/104012/0341f35b60053d34c1716f411591b0c8c9dd6b09.ogv?1490000593" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/104012/356fc331b349d882ab95e2bfc07083a939f5d1df.webm?1490000593" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/104012/b0889e223adaf8531475a9454afe1b9b0a852342.gif?1490000593&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/104012/76ee1dcd77de749a866aff5fe8c8e0ce219f9e40.gif?1490000593&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/104012/e2a911287c9e1c77ce1d62b560a927e5d4d33534.gif?1490000593&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/104012/a6e6f3f5557eccc7df9a1c02bb94f071cf22a143.gif?1490000593&quot;]">
+  <input type="hidden" name="for-girls-136534" id="for-girls-136534" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/path_of_hero">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Path of Hero" src="https://img-hws.y8.com/cloud/y8-thumbs/98318/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/path_of_hero">
+    <div class="infos">
+      <p class="title ltr">Path of Hero</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          77%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,728,554 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_129832" class="item thumb videobox" data-item-id="129832" data-label-ids="3D,First Person Shooter,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Multiplayer,Purchase Equipment Upgrades,Shooting,Fun,Stealth,WebGL,Not on Kong,Hunting" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/98128/a1ca7d44ab07ee48852794367489b91b63207eeb.mp4?1480415980" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/98128/a611fdd0ed607ee4771f7c2deb99ec69b7762439.ogv?1480415980" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/98128/62adf086e7838a840f638a8b4ea3b44d3d95b53f.webm?1480415980" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/98128/f03785e126d4d8768b4072e95b202738b9e43935.gif?1480415980&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/98128/254bf5ba4904b4e26b0df569f7d76de0695928b2.gif?1480415980&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/98128/5205f8c4cc95e7e602d2cb1b7a49a514f4fa24eb.gif?1480415980&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/98128/577936e91e087984a611218014fd05957d8cc985.gif?1480415980&quot;]">
+  <input type="hidden" name="for-girls-129832" id="for-girls-129832" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/hide_online">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Hide Online" src="https://img-hws.y8.com/cloud/y8-thumbs/95347/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/hide_online">
+    <div class="infos">
+      <p class="title ltr">Hide Online</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          91%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          22,564,892 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_175449" class="item thumb videobox" data-item-id="175449" data-label-ids="GameDistribution.com,1 Player,3D,Adrenaline,Blood,Gun Games,Killing Games,Shooting,Undead,Unity3D,Zombies,Horror,Survival Horror,First Person Shooter,Scary,Third Person Shooter" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/51ed5a2ac14f339ac3373fb55135f92d85f81ee5.mp4?1580458344" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/709795df0b71210255c4f64524c5ac9a81c63b99.ogv?1580458344" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/46245ac98107a4f23ccbadfc6255d58a0adb15a0.webm?1580458344" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/b3ebd4911510d5e6982aecb31a1aee9efdeeff7d.gif?1580458344&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/adaccebc0006f6c95f991440ce44c64118e1545b.gif?1580458344&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/47888a8499db507b710578f7039cf20797aa71c9.gif?1580458344&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/138993/bfadb95d39cc80ea792a259ce095303db64b2ee6.gif?1580458344&quot;]">
+  <input type="hidden" name="for-girls-175449" id="for-girls-175449" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/slendrina_must_die_the_asylum">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Slendrina Must Die: The Asylum" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/128929/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/slendrina_must_die_the_asylum">
+    <div class="infos">
+      <p class="title ltr">Slendrina Must Die: The Asylum</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          24,875 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_176590" class="item thumb videobox" data-item-id="176590" data-label-ids="GameDistribution.com,1 Player,3D,Collecting Games,Defense,First Person Shooter,Monsters,Shooting,Survival Horror,Undead,Gun Games" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/322e807771bde60adaf8da26b6902e977b332df3.mp4?1584286606" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/5376ac43c36a57d7ef49398a9d2f7a8bbe9d1acc.ogv?1584286606" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/45b693221624e5d2b28d4d6e2f3e1692d0361c27.webm?1584286606" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/f1f1fa203765814e9e232d4b4ac2b18ebe9afeca.gif?1584286606&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/71a435f8338e94f2e017b73dd717df4dc0efbec2.gif?1584286606&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/2d9dbc44bdfcf30fe2c0ecfa1175b978fdcdeefd.gif?1584286606&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/140592/531993ce24cc6cd5aec5455e4a5d9ae930394c45.gif?1584286606&quot;]">
+  <input type="hidden" name="for-girls-176590" id="for-girls-176590" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/shoot_your_nightmare_double_trouble">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Shoot Your Nightmare: Double Trouble" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/130403/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/shoot_your_nightmare_double_trouble">
+    <div class="infos">
+      <p class="title ltr">Shoot Your Nightmare: Double Trouble</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          14,536 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_143978" class="item thumb videobox" data-item-id="143978" data-label-ids="3D,First Person Shooter,Fun,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Y8 Screenshot,Multiplayer,Not on Kong,Parody,Political,Rocket,Shooting,Shotgun,Sniper,Unity3D,WebGL,Blood,Killing Games,online,crazy" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/a2431cacab21d8e960d134c64b9185f6466ceae4.mp4?1509696176" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/1bc015b361d452b58fcf3e6f4fa69d2f801f9f8d.ogv?1509696176" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/da387266e60517d1a981c758eaab7c3439cb6903.webm?1509696176" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/c923cf7ce68cbc7077ac58228abdd040b0fff15f.gif?1509696176&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/8c3e84674c8fb26b9931a9bc492bb9ab705ec3fe.gif?1509696176&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/62ca35a2564f020cc18089a7f6c4f13acb800ead.gif?1509696176&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover-002/videos/112025/954275a6ef4fbff194120325107f46568f822036.gif?1509696176&quot;]">
+  <input type="hidden" name="for-girls-143978" id="for-girls-143978" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/leader_strike">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Leader Strike" src="https://img-hws.y8.com/cloud/y8-thumbs/103321/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/leader_strike">
+    <div class="infos">
+      <p class="title ltr">Leader Strike</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          84%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,115,897 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_173745" class="item thumb videobox" data-item-id="173745" data-label-ids="Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,1 Player,Army Games,Factory,Gun Games,HTML5,Shooting,War,3D,First Person Shooter" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/cc65b64a900d3554e13d37e603b17f4d7420d502.mp4?1576233308" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/e1010168a7f3eb4fd4a20fe2dc56ff9de30cafd9.ogv?1576233308" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/fa039388c63d7cea67791e74dc45eb741d87e508.webm?1576233308" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/e58e428bb8f75cdb67af6d0ff9858a03c1b6eb1d.gif?1576233308&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/65d3f99eb427b29ad70c46213341706cef7b6435.gif?1576233308&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/904e59e44c78a6067ce422c6c1e08064468fbb3a.gif?1576233308&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/137398/1e8cdea2545086a2316ce2bb983b502c39474be9.gif?1576233308&quot;]">
+  <input type="hidden" name="for-girls-173745" id="for-girls-173745" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/warfare_area">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Warfare Area" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/127368/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/warfare_area">
+    <div class="infos">
+      <p class="title ltr">Warfare Area</p>
+
+
+      <div class="technology">
+        <p class="html5">
+          HTML5
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          77%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          622,538 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_95277" class="item thumb videobox" data-item-id="95277" data-label-ids="1 Player,Simulation,Unity3D,3D,Action,First Person Shooter" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/65430/335ddd3ef1bc9ffc357caf1a301315f92718c2f3.mp4?1461983926" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/65430/58b9f80bd9ff3110222ccc3cfbc936668022f877.ogv?1461983926" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/65430/71e2626c60d202b2c8d0aab4a4f03b545f76a94b.webm?1461983926" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/65430/2e24990fefd6ea0bb693a8366c7913222186e6ed.gif?1461983926&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/65430/54ecc8fbf0f24c4c1fdd22ff1fe4ffad46bfb5bd.gif?1461983926&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/65430/a4f6a863d91e077b23f45615c8d7a6503747dc64.gif?1461983926&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/65430/675ba8a618610df946bc2d467d09b6dcf330f91e.gif?1461983926&quot;]">
+  <input type="hidden" name="for-girls-95277" id="for-girls-95277" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/grapple">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Grapple" src="https://img-hws.y8.com/cloud/y8-thumbs/71306/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/grapple">
+    <div class="infos">
+      <p class="title ltr">Grapple</p>
+
+
+      <div class="technology">
+        <p class="unity_player">
+          Juego Unity 3D
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          87%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          8,097 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_157657" class="item thumb videobox" data-item-id="157657" data-label-ids="1 Player,3D,Army Games,Blood,First Person Shooter,Gun Games,Killing Games,Shooting,Unity3D,WebGL,Y8 Account,Y8 Achievements,Y8 Highscore" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/73f8624543e4186731f42d0569bec2f81a551082.mp4?1534340448" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/fdfd320f6626fda78b717d1e5a308113edf374c8.ogv?1534340448" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/7135da539a23edc1c8c9f22acf9c35c5ce0aa24d.webm?1534340448" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/e58e607141c672185d7a33740cf1ddff99ab5bc0.gif?1534340448&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/067a8394a8b8b84ca8ebd98ed89e4875672a3991.gif?1534340448&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/fafe2a93133e54078045ff26281ef1b61cfa0059.gif?1534340448&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/122989/d83a53767b66417e05002e0c328d751403d32f63.gif?1534340448&quot;]">
+  <input type="hidden" name="for-girls-157657" id="for-girls-157657" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/fps_agency_forest">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="FPS Agency: Forest" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/114014/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/fps_agency_forest">
+    <div class="infos">
+      <p class="title ltr">FPS Agency: Forest</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          66%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          37,302 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_908" class="item thumb videobox" data-item-id="908" data-label-ids="1 Player,Shooting,Action,Free Game,First Person Shooter" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/50855/57e6be1f4ed038f35dd3a70e1e6bd8fdf0dbc921.mp4?1458967909" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/50855/01f0142733e6b34feabfcd780b7ff7da2896a73e.ogv?1458967909" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/50855/4e6b325ead9c0a627aaaffcb70105ce8b4a21434.webm?1458967909" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/50855/d40343f7928574c2d0c2bca00fdc8539370c9f25.gif?1458967909&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/50855/f332bb6a03e7b4be9c18f2a044a4730eef8bf09f.gif?1458967909&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/50855/8d38332891b6ff6c3a44631210df42c38e1a8499.gif?1458967909&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/50855/19ff07979464301faeb384779afcc67d5a3917a8.gif?1458967909&quot;]">
+  <input type="hidden" name="for-girls-908" id="for-girls-908" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/gunny_bunny">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Gunny Bunny" src="https://img-hws.y8.com/cloud/y8-thumbs/841/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/gunny_bunny">
+    <div class="infos">
+      <p class="title ltr">Gunny Bunny</p>
+
+
+      <div class="technology">
+        <p class="flash">
+          Juego Flash
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          718,135 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_67173" class="item thumb videobox" data-item-id="67173" data-label-ids="Shooting,Action,Evade,Blood,Killing Games,First Person Shooter,3D,Unity3D,Gun Games,1 Player,Puzzle,Fun" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/1c39c264df2d60c9c1719bd679c401841f7a1f40.mp4?1565188650" data-ogv-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/c5664319079a394b7001e71fa8b4aa7f170704cd.ogv?1565188650" data-vp8-movie="https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/8dddd45506e0ba0272be147b902203b49a1af84b.webm?1565188650" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/e15787ba71278611b6800dc7e25f917b082df21e.gif?1565188650&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/b3299d1eb19f0a99224595d9d3bb7be59d86c872.gif?1565188650&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/566c440c59bef62dd14ad39644606777607ca82f.gif?1565188650&quot;,&quot;https://img-hws.y8.com/cloud/v2-y8-video-previews-001/videos/133641/939db607efcea67e1c531f1ff3ed458e9bb46857.gif?1565188650&quot;]">
+  <input type="hidden" name="for-girls-67173" id="for-girls-67173" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/super_hot">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Super Hot" src="https://img-hws.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/123670/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/super_hot">
+    <div class="infos">
+      <p class="title ltr">Super Hot</p>
+
+
+      <div class="technology">
+        <p class="unity_webgl">
+          Juego Unity WebGL
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,601,880 reproducciones
+      </p>
+    </div>
+</a></div>
+<div id="item_92025" class="item thumb videobox" data-item-id="92025" data-label-ids="1 Player,First Person Shooter,Free Game,Gun Games,Shooting,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Blood,Killing Games,Series" data-poster-url="https://img-hws.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/63016/c0e829c059f501ef1746feefc8e55f9663f93d47.mp4?1478013293" data-ogv-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/63016/3356b49e5fa6ec59219c8c1bfaff1181ef08db5e.ogv?1478013293" data-vp8-movie="https://img-hws.y8.com/cloud/y8-rollover/videos/63016/3ccbc2e5f831103f3f29aa63d25a51fcef937f89.webm?1478013293" data-thumb-movie="[&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/63016/c5eb39a3f085a5bbbb277fb5107a1193a84234d2.gif?1478013293&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/63016/c3c4a42f49ca590a29a2351918cccaebc1be6f7f.gif?1478013293&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/63016/d166c70d9348ef069653adfc451221e3b7d0785d.gif?1478013293&quot;,&quot;https://img-hws.y8.com/cloud/y8-rollover/videos/63016/bc1c4cf9a9cd6fbf460eb17c97a2a14c85bae89b.gif?1478013293&quot;]">
+  <input type="hidden" name="for-girls-92025" id="for-girls-92025" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://es.y8.com/games/bullet_fury">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Bullet Fury" src="https://img-hws.y8.com/cloud/y8-thumbs/94792/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://es.y8.com/games/bullet_fury">
+    <div class="infos">
+      <p class="title ltr">Bullet Fury</p>
+
+
+      <div class="technology">
+        <p class="flash">
+          Juego Flash
+        </p>
+      </div>
+
+      <p class="rating">
+        <span class="number">
+          82%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          19,233,334 reproducciones
+      </p>
+    </div>
+</a></div>
+</div>        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="requires-plugin-message" style="display:none;">
+  <div class="requires-plugin-message__wrapper">
+    <div class="content">
+      <p>
+      </p>
+    </div>
+    <div class="actions">
+      <a href="_" class="close"></a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    const widthGame = $('.item-direct-container').width();
+    $('.game-control-container').width(widthGame);
+</script>
+
+
+
+    </div>
+
+    <div class="header-menu-modal" style="display:none"></div>
+
+    <footer class="footer">
+  <div class="container">
+
+
+    <div class="bottom-section">
+      <div class="logo-container">
+        <a class="no-event" aria-label="logo" href="https://es.y8.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 45">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#000" d="M36 0h9v18h-9V0zm-9 18h9v9h-9v-9zM9 18h9v9H9v-9zm9 9h9v18h-9V27zM0 0h9v18H0V0z"/>
+    <path fill="#E81919" d="M62 0h29v9H62V0zm29 9h9v9h-9V9zM53 9h9v9h-9V9zm0 18h9v9h-9v-9zm9-9h29v9H62v-9zm0 18h29v9H62v-9zm29-9h9v9h-9v-9z"/>
+  </g>
+</svg>
+
+<img src="https://img-hws.y8.com/assets/y8/logo-header-68adbbce03b92e0b47b4e43fdf321a597d4ed2324c117f0eca1b0a9abe43f3f0.png" alt="Logo header" />
+</a>
+        <span>© 2020 Y8.COM.</span>
+        <span>All rights reserved.</span>
+      </div>
+      <div class="menu-games">
+        <div class="title">
+          Y8 Games
+        </div>
+        <ul>
+          <li><a href="https://es.y8.com/new/games">New Games</a></li>
+          <li><a href="https://static.y8.com/upload">Subir</a></li>
+          <li><a href="https://es.y8.com/tags">All Tags</a></li>
+          <li><a href="https://es.y8.com/games/best">Best of New</a></li>
+          <li><a href="https://es.y8.com/popular/games">Most Popular</a></li>
+          <li><a href="https://es.y8.com/download-app">Download App</a></li>
+        </ul>
+      </div>
+      <div class="menu-updates">
+        <div class="title">
+          Updates
+        </div>
+        <ul>
+          <li><a href="https://blog.y8.com/">Blog</a></li>
+          <li><a href="https://forum.y8.com">Forum</a></li>
+          <li><a href="https://twitter.com/y8_com" target="_blank" rel="noreferrer nofollow">Twitter</a></li>
+          <li><a href="https://www.facebook.com/Y8-Games-225100494185683/" target="_blank" rel="noreferrer nofollow">Facebook</a></li>
+          <li><a href="https://www.instagram.com/y8.games/" target="_blank" rel="noreferrer nofollow">Instagram</a></li>
+          <li><a href="https://discord.gg/ba9yXhj" target="_blank" rel="noreferrer nofollow">Discord</a></li>
+        </ul>
+      </div>
+      <div class="menu-company">
+        <div class="title">
+          Company
+        </div>
+        <ul>
+          <li><a href="https://es.y8.com/terms">Términos de Uso</a></li>
+          <li><a href="https://es.y8.com/privacy">Políticas de Privacidad</a></li>
+          <li><a href="https://es.y8.com/cookie-policy">Cookie Policy</a></li>
+          <li><a href="https://es.y8.com/games_for_your_website">Juegos para tu Página web</a></li>
+          <li><a href="https://es.y8.com/contact/new">Formulario de Contacto</a></li>
+          <li><a href="mailto:y8@webgroup-limited.com" target="_blank" rel="noreferrer nofollow">
+            Email Us
+        </a></li>
+        </ul>
+      </div>
+      <div class="follow-us">
+        <div class="title">
+          Follow us
+        </div>
+        <ul>
+          <li>
+            <a href="https://twitter.com/y8_com" target="_blank" rel="noreferrer nofollow" aria-label="twitter">
+              <img src="https://img-hws.y8.com/assets/svg/twitter-83465d06a378d6092d6ba4c27f427a7ec92ac99b3361d762d7f532c1e2866bb7.svg" alt="twitter" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/Y8-Games-225100494185683/" target="_blank" rel="noreferrer nofollow" aria-label="facebook">
+              <img src="https://img-hws.y8.com/assets/svg/facebook-695660361c5831d71bed05ab4359a88a0d623b856dc1f2706b6686387f780c4b.svg" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/y8.games/" target="_blank" rel="noreferrer nofollow" aria-label="instagram">
+              <img src="https://img-hws.y8.com/assets/svg/instagram-0f49912408f2414ab709b628010f9e86ef35059523a9525e7d2b2a212f40c34e.svg" alt="instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/ba9yXhj" target="_blank" rel="noreferrer nofollow" aria-label="discord">
+              <img src="https://img-hws.y8.com/assets/svg/discord-015fc910fc3c9392e25c75726575680106e3de4c12900aac69063c4d1a5aa548.svg" alt="discord" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-image">
+        <img src="https://img-hws.y8.com/assets/y8/footer_image0-93de02d6d9b5ddf0d131c13b2b2bc8790725265e8d208dc1555c77902ec3bbdc.png" alt="Footer image0" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="dark-overlay"></div>
+
+    <div class="policy-validation" id="policy-validation" style="display:none;">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 45">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#000" d="M36 0h9v18h-9V0zm-9 18h9v9h-9v-9zM9 18h9v9H9v-9zm9 9h9v18h-9V27zM0 0h9v18H0V0z"/>
+    <path fill="#E81919" d="M62 0h29v9H62V0zm29 9h9v9h-9V9zM53 9h9v9h-9V9zm0 18h9v9h-9v-9zm9-9h29v9H62v-9zm0 18h29v9H62v-9zm29-9h9v9h-9v-9z"/>
+  </g>
+</svg>
+
+<img src="https://img-hws.y8.com/assets/y8/logo-header-68adbbce03b92e0b47b4e43fdf321a597d4ed2324c117f0eca1b0a9abe43f3f0.png" alt="Logo header" />
+
+    </div>
+
+  <div class="content">
+    Tanto nosotros como nuestros socios recogemos datos y usamos cookies para personalizar la publicidad y calcular analíticas, personalizar el contenido y analizar el tráfico de usuarios. Si continuas hacia nuestra web estarás aceptando estos términos. No dudes en leer nuestra <a target="_blank" href="https://es.y8.com/privacy">Políticas de Privacidad</a> y <a target="_blank" href="https://es.y8.com/cookie-policy">Política de Cookies</a>.
+  </div>
+
+  <div class="actions">
+    <a class="validate-policy" href="#">Entiendo</a>
+  </div>
+</div>
+
+    <script>
+//<![CDATA[
+
+  var triggerSuccess = function(){
+    if (document.location.pathname.match(/^\/login|^\/register/))
+    {
+      window.location.replace('/');
+    }
+    else
+    {
+      window.location.reload(true);
+    };
+  };
+  var triggerFailure = function(){
+    window.location.reload(true);
+  };
+
+  window.idAsyncInit = function(){
+    var query = document.location.search.substring(1);
+    var obj = {}, vars = query.split('&');
+    var pairs, key, val, ln = vars.length, enableTrack = false;
+
+    if (ln > 0) {
+      for (var i = 0; i < ln; i++) {
+        pairs = vars[i].split('=');
+        key = decodeURIComponent(pairs[0]);
+        val = decodeURIComponent(pairs[1]);
+
+        if (key === 'utm_source') {
+          enableTrack = true;
+        }
+
+        obj[key] = val;
+      }
+      enableTrack && ID.track && ID.track(obj);
+    }
+
+    var idnetRedirectUri = document.location.protocol + '//' + document.location.host + '/auth/idnet/callback';
+
+    // Use an Y8 Account event to wait until after init
+    // CF https://doc.y8.com/docs/javascript/the-basics/
+    //
+    ID.Event.subscribe('id.init', function() {
+      // Any other script may listen to that event and wait for Y8 Account
+      // initialization:
+      //
+      //   $(window).on('id.init', function() {
+      //     // some Y8 Account related code
+      //   });
+      //
+      $(window).trigger('id.init');
+
+      // copied from account.y8.com/sdk/scripts.id.js:48
+      // UserAgent.safari() returns 537.36 on my Ubuntu Chrome :/
+      // OPTIMIZE: fix UserAgent library or move this method to an object.
+      function safari() {
+        return navigator.userAgent.indexOf('Safari') != -1 &&
+          navigator.userAgent.indexOf('Chrome') == -1;
+      }
+
+      var idnetOptions = safari() ? { redirect_uri: idnetRedirectUri + '?origin=' + encodeURIComponent(location.pathname) } : {};
+
+      $('.idnet-fast-login-link').on('click', function(){
+        // Y8 Account tests if the browser is Safari.
+        // If no: usual login approach, using the modal
+        // If yes: OAuth recommended approach, redirecting the client
+        //
+        // Because Safari does not allow cross-domain cookies.
+        //
+        // Also, this is not the default Y8 Account behavior because we don't want
+        // to break the user experience and end a game session by redirecting
+        // the user. This is why the choice if up to the client (using regular
+        // ID.login() or ID.safariFixLogin() method).
+        //
+        ID.safariFixLogin(null, idnetOptions);
+        _gaq.push (['_trackEvent', 'Authentication', 'login']);
+        $(document).trigger('checkOverlayMenus');
+      });
+      $('.idnet-fast-register-link').on('click', function(){
+        ID.safariFixRegister(null, idnetOptions);
+        _gaq.push (['_trackEvent', 'Authentication', 'register']);
+        $(document).trigger('checkOverlayMenus');
+      });
+    });
+
+    ID.Event.subscribe('auth.authResponseChange', function(auth) {
+      $(window).trigger('auth.authResponseChange');
+    });
+
+    ID.init({
+     appId: '4fbb62b133968d57c10041b0',
+     redirectUri: idnetRedirectUri,
+     responseType: 'code'
+    });
+  };
+  (function () {
+    var idnet = document.createElement('script');
+    idnet.type = 'text/javascript';
+    idnet.async = true;
+    idnet.sucess = triggerSuccess;
+    idnet.error = triggerFailure;
+    idnet.src = 'https://cdn.y8.com/api/sdk.js';
+    var s = document.getElementsByTagName('script')[3];
+    s.parentNode.insertBefore(idnet, s);
+  })();
+
+//]]>
+</script>
+    <script id="live-search-template" type="text/x-handlebars-template">
+  <li>
+    <a href="{{path}}">
+      <img src="{{thumbnail}}" class="thumb">
+      {{name}}
+    </a>
+  </li>
+</script>
+
+
+      <script src="https://img-hws.y8.com/assets/y8/ads/game_banners-8589dc1f1a5fbee1c23e88afa81fecbec7b8e5d64d33b31296b12dbe4d0f4b97.js"></script>
+    <script>
+      var addthis_config = addthis_config || {};
+      addthis_config.data_track_addressbar = false;
+      addthis_config.data_track_clickback = false;
+
+      var addthis_share = {
+        url_transforms : {
+          clean: true
+        }
+      }
+    </script>
+    <div class="add-this-widget"></div>
+
+
+      <script>
+//<![CDATA[
+
+    window.Settings = window.Settings || {};
+    Settings.ga_account = "UA-18828733-1";
+    Settings.ga_domain = ".y8.com";
+    Settings.ga_sample_rate = 10;
+    window.google_analytics_uacct = "UA-18828733-1";
+    window.google_analytics_domain_name = ".y8.com";
+
+//]]>
+</script>
+    <script>
+//<![CDATA[
+
+  // initialize google analytics
+  document.addEventListener("DOMContentLoaded", function(event) {
+    window._gaq = window._gaq || [];
+    _gaq.push(['_setAccount', Settings.ga_account]);
+
+    if (Settings.ga_domain) {
+      _gaq.push(['_setDomainName', Settings.ga_domain]);
+    }
+
+    _gaq.push(['_setSampleRate', window.Settings.ga_sample_rate]);
+    _gaq.push(['_trackPageview']);
+
+      // insert google analytics lib
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == window.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  });
+
+//]]>
+</script>
+      <!-- Yandex.Metrika counter -->
+<script>
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter = new Ya.Metrika({
+                    id:45364173,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+
+                var sessionParams = {
+                    user_status: Cookies.get('logged_in') ? 'member' : 'guest',
+                    os64bit: OSDetector.bit64.toString(),
+                    ad_block_ext: window.adBlockDetected === undefined,
+                    
+                };
+
+                w.yaCounter.params(sessionParams);
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45364173" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  </body>
+</html>
+<!-- 2020-10-02 20:32:49 UTC -->
